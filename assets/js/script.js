@@ -17,7 +17,7 @@ function applesAppear() {
     let applePositionTop = Math.floor(Math.random()*100) + '%';
     let applePositionLeft = Math.floor(Math.random()*100) + '%';
     let applePicture = '<img src="assets/images/apple.png" class="apple-picture">';
-    $('.apple-picture').css({'top': applePositionTop, 'left': applePositionLeft});
+    $('.apple-picture').last().css({'top': applePositionTop, 'left': applePositionLeft});
     $('#apple-div').append(applePicture);
 
     console.log(applePositionTop, applePositionLeft);
