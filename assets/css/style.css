@@ -18,6 +18,10 @@ h1 {
     z-index: 1;
 }
 
+.picking-screen {
+    background-color: orange;
+}
+
 #main-frame {
     height: 70%;
     top: 0;
