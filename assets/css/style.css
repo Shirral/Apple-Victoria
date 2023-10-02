@@ -49,14 +49,11 @@ h1 {
     position: relative;
     width: 90%;
     height: 85%;
+    left: -2%;
     margin: 0 auto;
     background-color: violet;
 }
 
 .apple-picture {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    
-    
+    position: absolute; 
 }
