@@ -75,6 +75,8 @@ let applesPicked = 0;
 function pickApple(){
     applesPicked++;
     console.log(applesPicked);
+    $(this).animate({height: '+=50px', width: '+=50px'});
+    $(this).animate({height: '1px', width: '1px', opacity: 0}, function(){$(this).remove();});
 
 }
 
