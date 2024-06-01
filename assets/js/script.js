@@ -58,7 +58,9 @@ function applesAppear() {
 }
 
 function newTree(){
-    for (let i = 0; i < 5; i++) {
+    let appleAmount = Math.floor(Math.random() * 35.99 + 5);
+    console.log(appleAmount);
+    for (let i = 0; i < appleAmount; i++) {
         applesAppear();
       }
 } 
