@@ -57,4 +57,10 @@ function applesAppear() {
 
 }
 
-$(document).on('click', '#test', applesAppear);
+function newTree(){
+    for (let i = 0; i < 5; i++) {
+        applesAppear();
+      }
+} 
+
+$(document).on('click', '#test', newTree);
