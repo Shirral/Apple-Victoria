@@ -63,10 +63,19 @@ function newTree(){
     for (let i = 0; i < appleAmount; i++) {
         applesAppear();
       }
-    /**   $(#test).hide;   **/
 } 
 
 $(document).on('click', '#test', newTree);
 $(document).on('click', '#test', (function(){
     $(this).hide();
   }));
+
+let applesPicked = 0;
+
+function pickApple(){
+    applesPicked++;
+    console.log(applesPicked);
+
+}
+
+$(document).on('click', '.apple-picture', pickApple);
