@@ -52,6 +52,10 @@ h1 {
     left: -2%;
     margin: 0 auto;
     background-color: violet;
+    background-image: url("../images/tree.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .apple-picture {
