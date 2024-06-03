@@ -48,7 +48,7 @@ h1 {
 #apple-div {
     position: relative;
     width: 90%;
-    height: 85%;
+    height: 75%;
     left: -2%;
     margin: 0 auto;
     background-color: violet;
@@ -61,3 +61,11 @@ h1 {
 .apple-picture {
     position: absolute; 
 }
+
+#apple-bin {
+    height: 25%;
+    width: fit-content;
+    background-color: red;
+    margin: 0 auto;
+}
+

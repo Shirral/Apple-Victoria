@@ -4,7 +4,9 @@ function pickingMode() {
     <div id='apple-div'>
         
     </div>
-    `);
+    <div id='apple-bin'>
+        <img src='assets/images/bin.png'>
+    </div>`);
     $('#screen').addClass('picking-screen');
 };
 
