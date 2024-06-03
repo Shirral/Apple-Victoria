@@ -65,7 +65,9 @@ h1 {
 #apple-bin {
     height: 25%;
     width: fit-content;
-    background-color: red;
     margin: 0 auto;
 }
 
+#apple-bin img {
+    height: 100%;
+}
