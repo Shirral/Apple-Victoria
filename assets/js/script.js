@@ -10,6 +10,10 @@ function pickingMode() {
 
 $('button').on('click', pickingMode);
 
+$(document).contextmenu(function() {
+    return false;
+});
+
 /*-----------*/
 
 function applesAppear() {
