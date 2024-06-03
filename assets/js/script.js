@@ -18,6 +18,8 @@ $(document).contextmenu(function() {
 
 /*-----------*/
 
+let binApples = 0;
+
 function applesAppear() {
 
     let applePositionTop = Math.floor(Math.random()*100) + '%';
@@ -92,3 +94,6 @@ function dropApple(){
 }
 
 $(document).on('contextmenu', '.apple-picture', dropApple);
+
+/**=========================================**/
+
