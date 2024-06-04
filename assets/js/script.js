@@ -87,6 +87,7 @@ function pickApple(){
     console.log(binApples);
     $(this).animate({height: '+=50px', width: '+=50px'});
     $(this).animate({height: '1px', width: '1px', opacity: 0}, function(){$(this).remove();});
+    nextBin();
 }
 
 $(document).on('click', '.apple-picture', pickApple);
@@ -97,5 +98,12 @@ function dropApple(){
 
 $(document).on('contextmenu', '.apple-picture', dropApple);
 
+function nextBin(){
+    if (binApples >= 3){
+        binApples = 0;
+    } 
+}
+
 /**=========================================**/
 
+/** CALL NEXT BIN!!! **/
