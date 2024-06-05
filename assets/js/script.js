@@ -101,9 +101,10 @@ $(document).on('contextmenu', '.apple-picture', dropApple);
 function nextBin(){
     if (binApples >= 3){
         binApples = 0;
-    } 
+        $('#apple-bin').animate({marginLeft: '-10%', opacity: 0}, 'slow', function() {
+            $(this).css({marginLeft: '100%', opacity: 1, position: 'absolute'})});
+        $('#apple-bin').animate({left: '50%', marginLeft: 0}, 'slow', function(){
+            $(this).css({position: 'static', margin: '0 auto'})});
+      
+    }
 }
-
-/**=========================================**/
-
-/** CALL NEXT BIN!!! **/
