@@ -101,7 +101,7 @@ $(document).on('contextmenu', '.apple-picture', dropApple);
 
 function nextBin(){
     
-    if (binApples >= 4){
+    if (binApples >= 43){
         binApples = 0;
         let windowWidth = $(window).width();
         let binWidth = $('#apple-bin').outerWidth();
@@ -109,9 +109,6 @@ function nextBin(){
         
         $('#apple-bin').animate({marginLeft: 0, opacity: 0}, 'slow', function() {
             $(this).css({marginLeft: '100%'});
-            $('#apple-bin').html(`
-                <img src='assets/images/bin.png'></img>
-            `);
         });
         $('#apple-bin').animate({marginLeft: finalMarginLeft, opacity: 1}, 'slow');
     }
@@ -119,22 +116,22 @@ function nextBin(){
 
 function showBinFullnessLevel(){
     switch(true){
-        case (binApples < 2):
+        case (binApples < 15):
             $('#apple-bin').html(`
                 <img src='assets/images/bin2.png'></img>
             `);
             break;
-        case (binApples < 3):
+        case (binApples < 30):
             $('#apple-bin').html(`
                 <img src='assets/images/bin3.png'></img>
             `);
             break;
-        case (binApples < 4):
+        case (binApples < 43):
             $('#apple-bin').html(`
                 <img src='assets/images/bin4.png'></img>
             `);
             break;
-        case (binApples == 4):
+        case (binApples == 43):
             $('#apple-bin').html(`
                 <img src='assets/images/bin5.png'></img>
             `);
