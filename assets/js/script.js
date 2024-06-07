@@ -109,6 +109,9 @@ function nextBin(){
         
         $('#apple-bin').animate({marginLeft: 0, opacity: 0}, 'slow', function() {
             $(this).css({marginLeft: '100%'});
+            $('#apple-bin').html(`
+                <img src='assets/images/bin.png'></img>
+            `);
         });
         $('#apple-bin').animate({marginLeft: finalMarginLeft, opacity: 1}, 'slow');
     }
