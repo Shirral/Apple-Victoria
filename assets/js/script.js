@@ -86,9 +86,13 @@ function pickApple(){
     console.log(applesPicked);
     console.log(binApples);
     $(this).animate({height: '+=50px', width: '+=50px'});
-    $(this).animate({height: '1px', width: '1px', opacity: 0}, function(){$(this).remove();});
-    showBinFullnessLevel();
-    nextBin();
+    $(this).animate({height: '1px', width: '1px', opacity: 0}).promise().done(function() {
+        $(this).remove();
+        console.log('Apple removed');
+        showBinFullnessLevel();
+        nextBin();
+        nextTree();    
+    });
 }
 
 $(document).on('click', '.apple-picture', pickApple);
@@ -136,5 +140,22 @@ function showBinFullnessLevel(){
                 <img src='assets/images/bin5.png'></img>
             `);
             break;
+    }
+}
+
+function nextTree(){
+    if ($('#apple-div').children().length === 0) {
+        console.log('yeah');
+
+        let windowWidth = $(window).width();
+        let binWidth = $('#apple-div').outerWidth();
+        let finalMarginLeft = (windowWidth - binWidth) / 2;
+        
+        $('#apple-div').animate({marginLeft: '-100%'}, 'slow', function() {
+            $(this).css({marginLeft: '100%'});
+        });
+        $('#apple-div').animate({marginLeft: finalMarginLeft}, 'slow');
+    
+        console.log('yeah yeah');
     }
 }
