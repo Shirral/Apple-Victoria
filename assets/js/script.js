@@ -158,8 +158,12 @@ function nextTree(){
         $('#apple-div').animate({marginLeft: '-100%'}, 'slow', function() {
             $(this).css({marginLeft: '100%'});
         });
-        $('#apple-div').animate({marginLeft: finalMarginLeft}, 'slow');
+        $('#apple-div').animate({marginLeft: finalMarginLeft}, 'slow', function(){
+            newTree();
+        });
     
+        
+
         console.log('yeah yeah');
     }
 }
