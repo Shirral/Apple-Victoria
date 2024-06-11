@@ -98,7 +98,11 @@ function pickApple(){
 $(document).on('click', '.apple-picture', pickApple);
 
 function dropApple(){
-    $(this).animate({top: '+=200', opacity: 0}, function(){$(this).remove();}); 
+    $(this).animate({top: '+=200', opacity: 0}).promise().done(function() {
+        $(this).remove();
+        console.log('Apple removed');
+        nextTree();    
+    });
 }
 
 $(document).on('contextmenu', '.apple-picture', dropApple);
