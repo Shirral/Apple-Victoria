@@ -74,6 +74,7 @@ function newTree(){
 } 
 
 $(document).on('click', '#test', newTree);
+$(document).on('click', '#test', timer);
 $(document).on('click', '#test', (function(){
     $(this).hide();
   }));
@@ -171,4 +172,13 @@ function nextTree(){
 
         console.log('yeah yeah');
     }
+}
+
+function timer() {
+    let minutes = 0;
+    setInterval(function () {
+        minutes++;
+        console.log(minutes);
+        }, 1000);
+    
 }
