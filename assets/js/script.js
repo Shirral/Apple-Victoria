@@ -27,7 +27,7 @@ function applesAppear() {
 
     function appleType() {
     
-        let applePicturesArray = [`<img src="assets/images/apple.png" class="apple-picture" style="top:${applePositionTop}; left:${applePositionLeft}"></img>`, `<img src="assets/images/apple2.png" class="apple-picture" style="top:${applePositionTop}; left:${applePositionLeft}">`, `<img src="assets/images/apple3.png" class="apple-picture" style="top:${applePositionTop}; left:${applePositionLeft}">`, `<img src="assets/images/apple-bad.png" class="apple-picture" style="top:${applePositionTop}; left:${applePositionLeft}">`, `<img src="assets/images/apple-bad2.png" class="apple-picture" style="top:${applePositionTop}; left:${applePositionLeft}">`, `<img src="assets/images/apple-bad3.png" class="apple-picture" style="top:${applePositionTop}; left:${applePositionLeft}">`];
+        let applePicturesArray = [`<img src="assets/images/apple.png" class="apple-picture" style="top:${applePositionTop}; left:${applePositionLeft}"></img>`, `<img src="assets/images/apple2.png" class="apple-picture" style="top:${applePositionTop}; left:${applePositionLeft}">`, `<img src="assets/images/apple3.png" class="apple-picture" style="top:${applePositionTop}; left:${applePositionLeft}">`, `<img src="assets/images/apple-bad.png" class="apple-picture bad-apple" style="top:${applePositionTop}; left:${applePositionLeft}">`, `<img src="assets/images/apple-bad2.png" class="apple-picture bad-apple" style="top:${applePositionTop}; left:${applePositionLeft}">`, `<img src="assets/images/apple-bad3.png" class="apple-picture bad-apple" style="top:${applePositionTop}; left:${applePositionLeft}">`];
     
         let appleNum = Math.floor(Math.random()*100)+1;
     
@@ -79,12 +79,17 @@ $(document).on('click', '#test', (function(){
   }));
 
 let applesPicked = 0;
+let badApples = 0;
 
 function pickApple(){
     applesPicked++;
     binApples++;
+    if ($(this).hasClass("bad-apple")){
+        badApples++;
+    }
     console.log(applesPicked);
     console.log(binApples);
+    console.log(badApples);
     $(this).animate({height: '+=50px', width: '+=50px'});
     $(this).animate({height: '1px', width: '1px', opacity: 0}).promise().done(function() {
         $(this).remove();
