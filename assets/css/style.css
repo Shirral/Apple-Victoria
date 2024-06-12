@@ -45,10 +45,14 @@ h1 {
     width: 80%;
 }
 
+#timer-div {
+    text-align: center;
+}
+
 #apple-div {
     position: relative;
     width: 90%;
-    height: 75%;
+    height: 70%;
     left: -2%;
     margin: 0 auto;
     background-color: violet;

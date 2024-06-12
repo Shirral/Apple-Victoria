@@ -1,6 +1,9 @@
 function pickingMode() {
     $('#screen').html(`
     <button id='test'>Make an apple appear...</button>
+    <div id='timer-div'>
+        <h1>8:00</h1>
+    </div>
     <div id='apple-div'>
         
     </div>
@@ -179,6 +182,10 @@ function timer() {
     setInterval(function () {
         minutes++;
         console.log(minutes);
+        switch(true){
+            case (minutes < 15):
+                /* to be continued, forgot that I need the div to display stuff in first*/
+        }
         }, 1000);
     
 }
