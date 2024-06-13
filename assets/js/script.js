@@ -178,108 +178,112 @@ function nextTree(){
 }
 
 function timer() {
-    let minutes = 0;
+    let seconds = 0;
     setInterval(function () {
-        minutes++;
-        console.log(minutes);
+        seconds++;
+        console.log(seconds);
         switch(true){
-            case (minutes < 15):
+            case (seconds < 5):
                 $('#timer-div h1').html('8:00');
                 break;
-            case (minutes < 30):
+            case (seconds < 10):
                 $('#timer-div h1').html('8:15');
                 break;
-            case (minutes < 45):
+            case (seconds < 15):
+                $('#timer-div h1').html('8:30');
+                break;
+            case (seconds < 20):
                 $('#timer-div h1').html('8:45');
                 break;
-            case (minutes < 60):
+            case (seconds < 25):
                 $('#timer-div h1').html('9:00');
                 break;
-            case (minutes < 75):
+            case (seconds < 30):
                 $('#timer-div h1').html('9:15');
                 break;
-            case (minutes < 90):
+            case (seconds < 35):
                 $('#timer-div h1').html('9:30');
                 break;
-            case (minutes < 105):
+            case (seconds < 40):
                 $('#timer-div h1').html('9:45');
                 break;
-            case (minutes < 120):
+            case (seconds < 45):
                 $('#timer-div h1').html('10:00');
                 break;
-            case (minutes < 135):
+            case (seconds < 50):
                 $('#timer-div h1').html('10:15');
                 break;
-            case (minutes < 150):
+            case (seconds < 55):
                 $('#timer-div h1').html('10:30');
                 break;
-            case (minutes < 165):
+            case (seconds < 60):
                 $('#timer-div h1').html('10:45');
                 break;
-            case (minutes < 180):
+            case (seconds < 65):
                 $('#timer-div h1').html('11:00');
                 break;
-            case (minutes < 195):
+            case (seconds < 70):
                 $('#timer-div h1').html('11:15');
                 break;
-            case (minutes < 210):
+            case (seconds < 75):
                 $('#timer-div h1').html('11:30');
                 break;
-            case (minutes < 225):
+            case (seconds < 80):
                 $('#timer-div h1').html('11:45');
                 break;
-            case (minutes < 240):
+            case (seconds < 85):
                 $('#timer-div h1').html('12:00');
                 break;
-            case (minutes < 255):
+            case (seconds < 90):
                 $('#timer-div h1').html('12:15');
                 break;
-            case (minutes < 270):
+            case (seconds < 95):
                 $('#timer-div h1').html('12:30');
                 break;
-            case (minutes < 285):
+            case (seconds < 100):
                 $('#timer-div h1').html('12:45');
                 break;
-            case (minutes < 300):
+            case (seconds < 105):
                 $('#timer-div h1').html('13:00');
                 break;
-            case (minutes < 315):
+            case (seconds < 110):
                 $('#timer-div h1').html('13:15');
                 break;
-            case (minutes < 330):
+            case (seconds < 115):
                 $('#timer-div h1').html('13:30');
                 break;
-            case (minutes < 345):
+            case (seconds < 120):
                 $('#timer-div h1').html('13:45');
                 break;
-            case (minutes < 360):
+            case (seconds < 125):
                 $('#timer-div h1').html('14:00');
                 break;
-            case (minutes < 375):
+            case (seconds < 130):
                 $('#timer-div h1').html('14:15');
                 break;
-            case (minutes < 390):
+            case (seconds < 135):
                 $('#timer-div h1').html('14:30');
                 break;
-            case (minutes < 405):
+            case (seconds < 140):
                 $('#timer-div h1').html('14:45');
                 break;
-            case (minutes < 420):
+            case (seconds < 145):
                 $('#timer-div h1').html('15:00');
                 break;
-            case (minutes < 435):
+            case (seconds < 150):
                 $('#timer-div h1').html('15:15');
                 break;
-            case (minutes < 450):
+            case (seconds < 155):
                 $('#timer-div h1').html('15:30');
                 break;
-            case (minutes < 465):
+            case (seconds < 160):
                 $('#timer-div h1').html('15:45');
                 break;
-            case (minutes < 480):
+            default:
                 $('#timer-div h1').html('16:00');
+                /*stop timer?!*/
                 break;
         }
-        }, 1000);
+    }, 1000);
     
 }
