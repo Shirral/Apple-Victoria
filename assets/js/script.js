@@ -179,7 +179,10 @@ function nextTree(){
 
 function timer() {
     let seconds = 0;
-    setInterval(function () {
+
+    let interval = setInterval(displayTime, 1000);
+
+    function displayTime(){
         seconds++;
         console.log(seconds);
         switch(true){
@@ -279,11 +282,11 @@ function timer() {
             case (seconds < 160):
                 $('#timer-div h1').html('15:45');
                 break;
-            default:
+            case (seconds >= 165):
                 $('#timer-div h1').html('16:00');
-                /*stop timer?!*/
+                /*end screen*/
+                clearInterval(interval);
                 break;
         }
-    }, 1000);
-    
+    }
 }
