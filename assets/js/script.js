@@ -13,7 +13,7 @@ function pickingMode() {
     $('#screen').addClass('picking-screen');
 };
 
-$('button').on('click', pickingMode);
+$('button').on('click', endScreen); /* change it later to pickingMode again */
 
 $(document).contextmenu(function() {
     return false;
@@ -289,4 +289,18 @@ function timer() {
                 break;
         }
     }
+}
+
+function endScreen () {
+    $('#screen').html(`
+    <div id = 'win-fail-div'>
+    </div>
+    <div id='outcome-text-div'>
+    </div>
+    <div id='score-div'>
+    </div>
+    <button id = 'tryagain'>GIVE IT ANOTHER GO!</button>
+    `);
+    
+    $('#screen').removeClass('picking-screen').addClass('end-screen');
 }
