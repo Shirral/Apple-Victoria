@@ -306,3 +306,9 @@ function endScreen () {
     
     $('#screen').removeClass('picking-screen').addClass('end-screen');
 }
+
+
+$(document).on('click', '#tryagain button', function(){
+    $('#screen').removeClass('end-screen').addClass('picking-screen');
+    pickingMode();
+});
