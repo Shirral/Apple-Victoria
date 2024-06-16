@@ -310,5 +310,8 @@ function endScreen () {
 
 $(document).on('click', '#tryagain button', function(){
     $('#screen').removeClass('end-screen').addClass('picking-screen');
+    binApples = 0;
+    applesPicked = 0;
+    badApples = 0;
     pickingMode();
 });
