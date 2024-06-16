@@ -291,9 +291,11 @@ function timer() {
     }
 }
 
+let badApplePercentage = (badApples/applesPicked)*100;
+
 function endScreen () {
     $('#screen').html(`
-    <div id = 'win-fail-div'>
+    <div id ='win-fail-div'>
     </div>
     <div id='outcome-text-div'>
     </div>
@@ -305,6 +307,18 @@ function endScreen () {
         `);
     
     $('#screen').removeClass('picking-screen').addClass('end-screen');
+
+    if (binApples >= 151 && badApplePercentage <= 5){
+        $('#win-fail-div').html(`
+            <h1>APPLE VICTORIA!</h1>
+        `)
+    } else {
+        $('#win-fail-div').html(`
+            <h1>APPLE DEFEAT!</h1>
+        `)
+    }
+    
+    console.log(badApplePercentage);
 }
 
 
