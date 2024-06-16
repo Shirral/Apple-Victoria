@@ -299,8 +299,10 @@ function endScreen () {
     </div>
     <div id='score-div'>
     </div>
-    <button id = 'tryagain'>GIVE IT ANOTHER GO!</button>
-    `);
+    <div id='tryagain'>
+        <button>GIVE IT ANOTHER GO!</button>
+    </div>
+        `);
     
     $('#screen').removeClass('picking-screen').addClass('end-screen');
 }
