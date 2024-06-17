@@ -284,16 +284,20 @@ function timer() {
                 break;
             case (seconds >= 165):
                 $('#timer-div h1').html('16:00');
-                /*end screen*/
+                endScreen();
                 clearInterval(interval);
                 break;
         }
     }
 }
 
-let badApplePercentage = (badApples/applesPicked)*100;
-
 function endScreen () {
+    
+    let badApplePercentage = 0;
+    if (applesPicked > 0) {
+        badApplePercentage = (badApples / applesPicked) * 100;
+    }
+
     $('#screen').html(`
     <div id ='win-fail-div'>
     </div>
@@ -308,7 +312,7 @@ function endScreen () {
     
     $('#screen').removeClass('picking-screen').addClass('end-screen');
 
-    if (binApples >= 151 && badApplePercentage <= 5){
+    if (applesPicked >= 151 && badApplePercentage <= 5){
         $('#win-fail-div').html(`
             <h1>APPLE VICTORIA!</h1>
         `)
