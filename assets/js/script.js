@@ -298,10 +298,16 @@ function endScreen () {
         badApplePercentage = (badApples / applesPicked) * 100;
     }
 
+    let binsPicked = 0;
+    if (applesPicked > 0) {
+        binsPicked = (applesPicked/43).toFixed(1);
+    }
+
     $('#screen').html(`
     <div id ='win-fail-div'>
     </div>
     <div id='outcome-text-div'>
+        <h2>You have picked ${binsPicked} bins of apples.</h2>
     </div>
     <div id='score-div'>
     </div>
