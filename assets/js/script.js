@@ -331,11 +331,19 @@ function endScreen () {
 
     if (badApples == 0){
         $('#rotten-percentage').html('None');
+        $('#rotten-appraisal').html('Very impressive! Such commendable attention to detail!');
     } else if (badApplePercentage == 0){
         $('#rotten-percentage').html('Hardly any');
+        $('#rotten-appraisal').html('Good. This is what we want.');
+    } else if (badApplePercentage <= 5){
+        $('#rotten-percentage').html(`${badApplePercentage}%`);
+        $('#rotten-appraisal').html('This will do.');
     } else {
         $('#rotten-percentage').html(`${badApplePercentage}%`);
+        $('#rotten-appraisal').html('Sadly, this is below satisfactory.');
     }
+
+
     
     console.log(badApplePercentage);
 }
