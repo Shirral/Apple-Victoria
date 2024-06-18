@@ -308,6 +308,7 @@ function endScreen () {
     </div>
     <div id='outcome-text-div'>
         <h2>You have picked ${binsPicked} bins of apples.</h2>
+        <h2><span id='rotten-percentage'>${badApplePercentage}%</span> of them were rotten... <span id='rotten-appraisal'><span></h2>
     </div>
     <div id='score-div'>
     </div>
@@ -326,6 +327,14 @@ function endScreen () {
         $('#win-fail-div').html(`
             <h1>APPLE DEFEAT!</h1>
         `)
+    }
+
+    if (badApples == 0){
+        $('#rotten-percentage').html('None');
+    } else if (badApplePercentage == 0){
+        $('#rotten-percentage').html('Hardly any');
+    } else {
+        $('#rotten-percentage').html(badApplePercentage);
     }
     
     console.log(badApplePercentage);
