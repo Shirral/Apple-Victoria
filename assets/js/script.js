@@ -295,7 +295,7 @@ function endScreen () {
     
     let badApplePercentage = 0;
     if (applesPicked > 0) {
-        badApplePercentage = (badApples / applesPicked) * 100;
+        badApplePercentage = Math.floor((badApples / applesPicked) * 100);
     }
 
     let binsPicked = 0;
@@ -334,7 +334,7 @@ function endScreen () {
     } else if (badApplePercentage == 0){
         $('#rotten-percentage').html('Hardly any');
     } else {
-        $('#rotten-percentage').html(badApplePercentage);
+        $('#rotten-percentage').html(`${badApplePercentage}%`);
     }
     
     console.log(badApplePercentage);
