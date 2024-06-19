@@ -8,6 +8,7 @@ p {
 
 h1 {
     margin: 0;
+    font-size: 65px;
 }
 
 #screen {
@@ -28,29 +29,44 @@ h1 {
 }
 
 #win-fail-div {
-    background-color: aliceblue; /*get rid of it later, once everything's in its place */
+    color: rgb(225, 255, 205);
     height: 15%;
     width: 40%;
     margin: 2rem auto 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
 #outcome-text-div {
-    background-color: lightgreen;
+    background-color: rgba(225, 255, 205, 0.75);
     height: 50%;
     width: 70%;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+
+#outcome-text-div div {
+    padding: 2em;
+    text-align: justify;
 }
 
 #score-div {
-    background-color: lightseagreen;
+    color: white;
     height: 5%;
     width: 10%;
     margin: 1rem auto 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
 }
 
 #tryagain {
-    background-color: rgba(255, 255, 255, 0.1);
     margin: 0 auto;
     text-align: center;
 }

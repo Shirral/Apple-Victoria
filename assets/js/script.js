@@ -307,11 +307,13 @@ function endScreen () {
     <div id ='win-fail-div'>
     </div>
     <div id='outcome-text-div'>
-        <h2>You have picked ${binsPicked} bins of apples.</h2>
-        <h2><span id='rotten-percentage'>${badApplePercentage}%</span> of them were rotten... <span id='rotten-appraisal'><span></h2>
-        <h2>Your supervisor <span id='supervisor-span'></span></h2>
-        <h2>"<span id='supervisor-says'></span>", he says to you.</h2>
-        <h2>The work day is over. <span id='what-next-span'></span></h2>
+        <div>
+            <h2>You have picked ${binsPicked} bins of apples.</h2>
+            <h2><span id='rotten-percentage'>${badApplePercentage}%</span> of them were rotten... <span id='rotten-appraisal'><span></h2>
+            <h2>Your supervisor <span id='supervisor-span'></span></h2>
+            <h2>"<span id='supervisor-says'></span>", he says to you.</h2>
+            <h2>The work day is over. <span id='what-next-span'></span></h2>
+        </div>
     </div>
     <div id='score-div'>
         <p>TOTAL SCORE: <span id='score-span'></span></p>
