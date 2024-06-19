@@ -309,6 +309,8 @@ function endScreen () {
     <div id='outcome-text-div'>
         <h2>You have picked ${binsPicked} bins of apples.</h2>
         <h2><span id='rotten-percentage'>${badApplePercentage}%</span> of them were rotten... <span id='rotten-appraisal'><span></h2>
+        <h2>Your supervisor <span id='supervisor-span'></span></h2>
+        <h2>"<span id='supervisor-says'></span>", he says to you.</h2>
     </div>
     <div id='score-div'>
     </div>
@@ -323,10 +325,26 @@ function endScreen () {
         $('#win-fail-div').html(`
             <h1>APPLE VICTORIA!</h1>
         `)
+        $('#supervisor-span').html('is very pleased with your work.');
+        $('#supervisor-says').html('Good speed, good fruit quality; you\'ve done well, kid');
+    } else if (applesPicked >= 151 && badApplePercentage > 5){
+        $('#win-fail-div').html(`
+            <h1>APPLE DEFEAT!</h1>
+        `)
+        $('#supervisor-span').html('looks disappointed.');
+        $('#supervisor-says').html('Good speed, but the fruit quality is awful. Would you buy these apples? I would not. We can\'t do much with these');
+    } else if (applesPicked < 151 && badApplePercentage <= 5){
+        $('#win-fail-div').html(`
+            <h1>APPLE DEFEAT!</h1>
+        `)
+        $('#supervisor-span').html('looks slightly disappointed.');
+        $('#supervisor-says').html('Good quality, but you really need to speed up. The farm will take losses if you don\'t, and the owners won\'t be happy about that...');
     } else {
         $('#win-fail-div').html(`
             <h1>APPLE DEFEAT!</h1>
         `)
+        $('#supervisor-span').html('looks at you in disbelief.');
+        $('#supervisor-says').html('You spent all day picking THAT? The quality is appaling, and you haven\'t even picked 3,5 bins. What am I supposed to do with you?');
     }
 
     if (badApples == 0){
