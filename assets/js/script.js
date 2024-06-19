@@ -311,6 +311,7 @@ function endScreen () {
         <h2><span id='rotten-percentage'>${badApplePercentage}%</span> of them were rotten... <span id='rotten-appraisal'><span></h2>
         <h2>Your supervisor <span id='supervisor-span'></span></h2>
         <h2>"<span id='supervisor-says'></span>", he says to you.</h2>
+        <h2>The work day is over. <span id='what-next-span'></span></h2>
     </div>
     <div id='score-div'>
     </div>
@@ -327,24 +328,28 @@ function endScreen () {
         `)
         $('#supervisor-span').html('is very pleased with your work.');
         $('#supervisor-says').html('Good speed, good fruit quality; you\'ve done well, kid');
+        $('#what-next-span').html('Give yourself a pat on the back - you\'ve earned it! As you retreat to your caravan to enjoy the rest of your day, you wonder if you can be even better tomorrow?...');
     } else if (applesPicked >= 151 && badApplePercentage > 5){
         $('#win-fail-div').html(`
             <h1>APPLE DEFEAT!</h1>
         `)
-        $('#supervisor-span').html('looks disappointed.');
-        $('#supervisor-says').html('Good speed, but the fruit quality is awful. Would you buy these apples? I would not. We can\'t do much with these');
+        $('#supervisor-span').html('is not impressed.');
+        $('#supervisor-says').html('Good speed, but the fruit quality is awful. Would you buy these apples? I would not. We can\'t do much with them');
+        $('#what-next-span').html('The supervisor was probably right - although the beauty standards for apples are unreasonably high, most people still prefer their fruits without mushy bits, mould, or worms. You\'ll need to do better tomorrow...');
     } else if (applesPicked < 151 && badApplePercentage <= 5){
         $('#win-fail-div').html(`
             <h1>APPLE DEFEAT!</h1>
         `)
         $('#supervisor-span').html('looks slightly disappointed.');
         $('#supervisor-says').html('Good quality, but you really need to speed up. The farm will take losses if you don\'t, and the owners won\'t be happy about that...');
+        $('#what-next-span').html('As you go back to your caravan, you hear your peers bragging about how much they picked today. If they can do it, surely you can get there, too? Tomorrow, you think to yourself. You will be faster tomorrow.');
     } else {
         $('#win-fail-div').html(`
             <h1>APPLE DEFEAT!</h1>
         `)
         $('#supervisor-span').html('looks at you in disbelief.');
         $('#supervisor-says').html('You spent all day picking THAT? The quality is appaling, and you haven\'t even picked 3,5 bins. What am I supposed to do with you?');
+        $('#what-next-span').html('You don\'t know what your supervisor will do with you, but you sure hope it doesn\'t involve being sent to the packhouse. There is a reason everybody hates it there. You better do much, MUCH better tomorrow...');
     }
 
     if (badApples == 0){
