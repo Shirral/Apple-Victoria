@@ -319,7 +319,7 @@ function endScreen () {
         <p>TOTAL SCORE: <span id='score-span'></span></p>
     </div>
     <div id='tryagain'>
-        <button>GIVE IT ANOTHER GO!</button>
+        <p>GIVE IT ANOTHER GO!</p>
     </div>
         `);
     
@@ -379,7 +379,7 @@ function endScreen () {
 }
 
 
-$(document).on('click', '#tryagain button', function(){
+$(document).on('click', '#tryagain p', function(){
     $('#screen').removeClass('end-screen').addClass('picking-screen');
     binApples = 0;
     applesPicked = 0;
