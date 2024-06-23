@@ -48,8 +48,7 @@ h2 {
     background-size: cover;
 }
 
-#win-fail-div {
-    color: rgb(225, 255, 205);
+#win-fail-div, #title-div {
     text-shadow: 4px 4px black;
     height: 15%;
     width: 40%;
@@ -57,13 +56,17 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
-#outcome-text-div {
-    background-color: rgba(225, 255, 205, 0.85);
-    height: 50%;
-    width: 70%;
+#win-fail-div {
+    color: rgb(225, 255, 205);
+}
+
+#title-div {
+    color: rgb(209, 29, 29);
+}
+
+#outcome-text-div, #intro-text-div {
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -71,7 +74,18 @@ h2 {
     border-radius: 25px;
 }
 
-#outcome-text-div div {
+#outcome-text-div {
+    background-color: rgba(225, 255, 205, 0.85);
+    height: 50%;
+    width: 70%;
+}
+
+#intro-text-div {
+    background-color: rgba(255, 246, 205, 0.85);
+    width: 90%;
+}
+
+#outcome-text-div div, #intro-text-div div {
     padding: 2em;
     text-align: justify;
 }
@@ -86,21 +100,33 @@ h2 {
     font-weight: 600;
 }
 
-#tryagain {
+#tryagain, #start-button {
     margin: 0 auto;
     padding: 0.5em;
     text-align: center;
+    border-radius: 10px;
+    width: 20%;
+}
+
+#tryagain {
     color: rgb(225, 255, 205);
     border: 1px solid rgb(225, 255, 205);
-    border-radius: 10px;
     background-color: rgb(7, 34, 35);
-    width: 20%;
+}
+
+#start-button {
+    color: rgb(255, 246, 205);
+    background-color: black;
 }
 
 #tryagain:hover {
     color: rgb(7, 34, 35);
     background-color: rgb(225, 255, 205);
     font-weight: 600;
+}
+
+#start-button:hover {
+    background-color: rgb(209, 29, 29);
 }
 
 #timer-div {
