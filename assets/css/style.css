@@ -38,6 +38,11 @@ h2 {
     background-position: center;
 }
 
+.start-screen {
+    background-image: url("../images/start-screen-bg.jpg");
+    background-size: cover;
+}
+
 .end-screen {
     background-image: url("../images/end-screen-bg.jpg");
     background-size: cover;
