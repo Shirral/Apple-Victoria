@@ -98,29 +98,6 @@ h2 {
     font-weight: 600;
 }
 
-#main-frame {
-    height: 70%;
-    top: 0;
-    background-color: lightblue;
-}
-
-#text-frame {
-    background-color: greenyellow;
-    height: 30%;
-    bottom: 0;
-}
-
-#speakers-name {
-    margin: 0 auto;
-    padding-top: 1rem;
-    width: 80%;
-}
-
-#speakers-dialogue {
-    margin: 1rem auto;
-    width: 80%;
-}
-
 #timer-div {
     text-align: center;
 }
