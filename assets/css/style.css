@@ -117,6 +117,7 @@ h2 {
 #start-button {
     color: rgb(255, 246, 205);
     background-color: black;
+    margin: 2em auto;
 }
 
 #tryagain:hover {
