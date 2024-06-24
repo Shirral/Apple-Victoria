@@ -2,15 +2,19 @@ function pickingMode() {
     $('#screen').html(`
     <div class='modal'>
         <div id='modal-controls'>
-            <p>Test...</p>
-            <p>Test...</p>
-            <p>Test...</p>
-            <p>Test...</p>
-            <p>Test...</p>
-            <p>Test...</p>
-                <div id='gamestart'>
-                    <p>START THE DAY!</p>
-                </div>       
+            <div id='clickimages'>
+                <div id='leftclick'>
+                    <div></div>
+                    <p><span class='highlight'>Left click</span> on an apple to pick it.</p>
+                </div>
+                <div id='rightclick'>
+                    <div></div>
+                    <p><span class='highlight'>Right click</span> on an apple to drop it to the ground.</p>
+                </div>
+            </div>
+            <div id='gamestart'>
+                <p>START THE DAY!</p>
+            </div>       
             </div>
     </div>
 

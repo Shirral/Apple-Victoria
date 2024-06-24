@@ -195,3 +195,34 @@ h2 {
     z-index: 3;
 }
 
+#clickimages {
+    display: flex;
+    justify-content: space-evenly;
+    height: 80%;
+    width: 100%;
+}
+
+#leftclick, #rightclick {
+    background-color: blueviolet;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#leftclick div {
+    height: 75%;
+    background-image: url("../images/leftclick.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#rightclick div {
+    height: 75%;
+    background-image: url("../images/rightclick.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
