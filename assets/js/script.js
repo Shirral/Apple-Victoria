@@ -1,6 +1,19 @@
 function pickingMode() {
     $('#screen').html(`
-    <button id='test'>Make an apple appear...</button>
+    <div class='modal'>
+        <div id='modal-controls'>
+            <p>Test...</p>
+            <p>Test...</p>
+            <p>Test...</p>
+            <p>Test...</p>
+            <p>Test...</p>
+            <p>Test...</p>
+                <div id='gamestart'>
+                    <p>START THE DAY!</p>
+                </div>       
+            </div>
+    </div>
+
     <div id='timer-div'>
         <h1>8:00</h1>
     </div>
@@ -9,7 +22,8 @@ function pickingMode() {
     </div>
     <div id='apple-bin'>
         <img src='assets/images/bin.png'>
-    </div>`);
+    </div>
+    `);
     $('#screen').removeClass('start-screen').addClass('picking-screen');
 };
 
@@ -76,10 +90,10 @@ function newTree(){
       }
 } 
 
-$(document).on('click', '#test', newTree);
-$(document).on('click', '#test', timer);
-$(document).on('click', '#test', (function(){
-    $(this).hide();
+$(document).on('click', '#gamestart', newTree);
+$(document).on('click', '#gamestart', timer);
+$(document).on('click', '#gamestart', (function(){
+    $('.modal').remove();
   }));
 
 let applesPicked = 0;
