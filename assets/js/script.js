@@ -14,14 +14,17 @@ function pickingMode() {
             </div>
     </div>
 
-    <div id='timer-div'>
-        <h1>8:00</h1>
-    </div>
-    <div id='apple-div'>
-        
-    </div>
-    <div id='apple-bin'>
-        <img src='assets/images/bin.png'>
+    <div id='tree-bg-div'></div>
+    <div id='content'>
+        <div id='timer-div'>
+            <h1>8:00</h1>
+        </div>
+        <div id='apple-div'>
+            
+        </div>
+        <div id='apple-bin'>
+            <img src='assets/images/bin.png'>
+        </div>
     </div>
     `);
     $('#screen').removeClass('start-screen').addClass('picking-screen');
@@ -175,13 +178,13 @@ function nextTree(){
         console.log('yeah');
 
         let windowWidth = $(window).width();
-        let binWidth = $('#apple-div').outerWidth();
+        let binWidth = $('#tree-bg-div').outerWidth();
         let finalMarginLeft = (windowWidth - binWidth) / 2;
         
-        $('#apple-div').animate({marginLeft: '-100%'}, 'slow', function() {
+        $('#tree-bg-div').animate({marginLeft: '-100%'}, 'slow', function() {
             $(this).css({marginLeft: '100%'});
         });
-        $('#apple-div').animate({marginLeft: finalMarginLeft}, 'slow', function(){
+        $('#tree-bg-div').animate({marginLeft: finalMarginLeft}, 'slow', function(){
             newTree();
         });
     
