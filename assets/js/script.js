@@ -10,10 +10,10 @@ function pickingMode() {
     <div id='apple-bin'>
         <img src='assets/images/bin.png'>
     </div>`);
-    $('#screen').addClass('picking-screen');
+    $('#screen').removeClass('start-screen').addClass('picking-screen');
 };
 
-$('button').on('click', endScreen); /* change it later to pickingMode again */
+$('#start-button').on('click', pickingMode);
 
 $(document).contextmenu(function() {
     return false;
