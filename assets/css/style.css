@@ -31,7 +31,7 @@ h2 {
 }
 
 .picking-screen {
-    background-color: orange;
+    background-color: rgb(64,105,52);
     background-image: url("../images/tree.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -140,7 +140,6 @@ h2 {
     height: 70%;
     left: -2%;
     margin: 0 auto;
-    border: 1px solid violet;
 }
 
 .apple-picture {
