@@ -12,7 +12,7 @@ function pickingMode() {
                     <p><span class='highlight'>Right click</span> on an apple to drop it to the ground.</p>
                 </div>
             </div>
-            <div id='gamestart'>
+            <div id='gamestart' class='prevent-select'>
                 <p>START THE DAY!</p>
             </div>       
             </div>
@@ -20,13 +20,13 @@ function pickingMode() {
 
     <div id='tree-bg-div'></div>
     <div id='content'>
-        <div id='timer-div'>
+        <div id='timer-div' class='prevent-select'>
             <h1>8:00</h1>
         </div>
         <div id='apple-div'>
             
         </div>
-        <div id='apple-bin'>
+        <div id='apple-bin' class='prevent-select'>
             <img src='assets/images/bin.png'>
         </div>
     </div>
@@ -51,7 +51,7 @@ function applesAppear() {
 
     function appleType() {
     
-        let applePicturesArray = [`<img src="assets/images/apple.png" class="apple-picture" style="top:${applePositionTop}; left:${applePositionLeft}"></img>`, `<img src="assets/images/apple2.png" class="apple-picture" style="top:${applePositionTop}; left:${applePositionLeft}">`, `<img src="assets/images/apple3.png" class="apple-picture" style="top:${applePositionTop}; left:${applePositionLeft}">`, `<img src="assets/images/apple-bad.png" class="apple-picture bad-apple" style="top:${applePositionTop}; left:${applePositionLeft}">`, `<img src="assets/images/apple-bad2.png" class="apple-picture bad-apple" style="top:${applePositionTop}; left:${applePositionLeft}">`, `<img src="assets/images/apple-bad3.png" class="apple-picture bad-apple" style="top:${applePositionTop}; left:${applePositionLeft}">`];
+        let applePicturesArray = [`<img src="assets/images/apple.png" class="apple-picture prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}"></img>`, `<img src="assets/images/apple2.png" class="apple-picture prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}">`, `<img src="assets/images/apple3.png" class="apple-picture prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}">`, `<img src="assets/images/apple-bad.png" class="apple-picture bad-apple prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}">`, `<img src="assets/images/apple-bad2.png" class="apple-picture bad-apple prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}">`, `<img src="assets/images/apple-bad3.png" class="apple-picture bad-apple prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}">`];
     
         let appleNum = Math.floor(Math.random()*100)+1;
     
@@ -325,7 +325,7 @@ function endScreen () {
     }
 
     $('#screen').html(`
-    <div id ='win-fail-div'>
+    <div id ='win-fail-div' class='prevent-select'>
     </div>
     <div id='outcome-text-div'>
         <div>
@@ -336,10 +336,10 @@ function endScreen () {
             <h2>The work day is over. <span id='what-next-span'></span></h2>
         </div>
     </div>
-    <div id='score-div'>
+    <div id='score-div'class='prevent-select'>
         <p>TOTAL SCORE: <span id='score-span'></span></p>
     </div>
-    <div id='tryagain'>
+    <div id='tryagain'class='prevent-select'>
         <p>GIVE IT ANOTHER GO!</p>
     </div>
         `);
