@@ -8,6 +8,7 @@
 
 body {
     margin: 0;
+    overflow: hidden;
 }
 
 p {
@@ -109,11 +110,13 @@ h2 {
 #intro-text-div {
     background-color: rgba(255, 246, 205, 0.85);
     width: 90%;
+    height: 60%;
 }
 
 #outcome-text-div div, #intro-text-div div {
     padding: 2em;
     text-align: justify;
+    margin: auto;
 }
 
 #score-div {
@@ -251,7 +254,134 @@ h2 {
 
 /* ----------------------- MEDIA QUERIES -------------------------- */
 
-@media screen and (max-width: 400px) {
+@media screen and (min-width: 2400px) {
+    
+    h1{
+        font-size: 120px;
+    }
+    
+    p {
+        font-size: 48px;
+    }
+
+    #title-div{
+        text-shadow: 5px 5px black;
+    }
+    
+    #intro-text-div h2 {
+        font-size: 48px;
+    }
+
+    #outcome-text-div div, #intro-text-div div {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    #tryagain, #start-button, #gamestart {
+        width: 30%;
+        margin-top: 9em;
+        margin-bottom: 9em;
+    }
+
+}
+
+@media screen and (min-width: 2100px) and (max-width: 2399px) {
+    
+    h1{
+        font-size: 120px;
+    }
+
+    #title-div{
+        text-shadow: 5px 5px black;
+    }
+
+    #intro-text-div h2 {
+        font-size: 43px;
+    }
+
+    #outcome-text-div div, #intro-text-div div {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    #tryagain, #start-button, #gamestart {
+        width: 30%;
+        margin-top: 7em;
+        margin-bottom: 7em;
+    }
+
+    p {
+        font-size: 43px;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+
+    #intro-text-div h2 {
+        font-size: 23px;
+    }
+
+    #outcome-text-div div, #intro-text-div div {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+}
+
+@media screen and (max-width: 1250px) {
+
+    #intro-text-div h2 {
+        font-size: 21px;
+    }
+
+    #outcome-text-div div, #intro-text-div div {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+}
+
+@media screen and (max-width: 1050px) {
+
+    #intro-text-div h2 {
+        font-size: 19px;
+    }
+
+    #outcome-text-div, #intro-text-div {
+        overflow: auto;
+    }
+
+    #outcome-text-div div, #intro-text-div div {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    #intro-text-div h2 {
+        font-size: 17.5px;
+    }
+
+    #outcome-text-div, #intro-text-div {
+        overflow: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    #outcome-text-div div, #intro-text-div div {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    #outcome-text-div::-webkit-scrollbar, #intro-text-div::-webkit-scrollbar {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
 
     h1 {
         font-size: 50px;
@@ -259,6 +389,41 @@ h2 {
    
     #title-div{
         text-shadow: 3px 3px black;
+    }
+
+    #intro-text-div h2 {
+        font-size: 15px;
+    }
+
+    #outcome-text-div, #intro-text-div {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    #outcome-text-div::-webkit-scrollbar, #intro-text-div::-webkit-scrollbar {
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width: 450px) {
+    
+    p {
+        font-size: 14px;
+    }
+
+    #tryagain, #start-button, #gamestart {
+        width: 50%;
+    }
+
+    #outcome-text-div, #intro-text-div {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    #outcome-text-div::-webkit-scrollbar, #intro-text-div::-webkit-scrollbar {
+        display: none;
     }
 
     #intro-text-div h2 {
