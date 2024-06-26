@@ -5,11 +5,13 @@ function pickingMode() {
             <div id='clickimages'>
                 <div id='leftclick'>
                     <div></div>
-                    <p><span class='highlight'>Left click</span> on an apple to pick it.</p>
-                </div>
+                    <p class='desktop-controls'><span class='highlight'>Left click</span> on an apple to pick it.</p>
+                    <p class='mobile-controls'><span class='highlight'>Tap</span> on an apple to pick it.</p>
+                    </div>
                 <div id='rightclick'>
                     <div></div>
-                    <p><span class='highlight'>Right click</span> on an apple to drop it to the ground.</p>
+                    <p class='desktop-controls'><span class='highlight'>Right click</span> on an apple to drop it to the ground.</p>
+                    <p class='mobile-controls'><span class='highlight'>Swipe down</span> on an apple to drop it to the ground.</p>
                 </div>
             </div>
             <div id='gamestart' class='prevent-select'>
