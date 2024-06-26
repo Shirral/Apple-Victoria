@@ -455,8 +455,14 @@ h2 {
 
     #leftclick div, #rightclick div {
         width: 45%;
-        align-self: start;
     }
 
+    #leftclick div {
+        background-image: url("../images/tap.gif");
+    }
+
+    #rightclick div {
+        background-image: url("../images/swipe.gif");
+    }
 
 }
