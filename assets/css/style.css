@@ -430,4 +430,33 @@ h2 {
         font-size: 15px;
     }
 
+    #modal-controls {
+        width: 70%;
+        height: 70%;        
+        padding: 1em;
+    }
+    
+    #clickimages {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #rightclick, #leftclick {
+        flex-direction: row;
+        width: 90%;
+        align-items: center;
+        gap: 1em;
+    }
+
+    #leftclick p, #rightclick p {
+        margin: 0;
+        width: 40%;
+    }
+
+    #leftclick div, #rightclick div {
+        width: 45%;
+        align-self: start;
+    }
+
+
 }
