@@ -383,6 +383,38 @@ h2 {
         display: none;
     }
 
+    #modal-controls {
+        width: 70%;
+        height: 70%;        
+        padding: 1em;
+    }
+    
+    .desktop-controls {
+        display: none;
+    }
+    
+    .mobile-controls {
+        display: block;
+    }
+
+    #leftclick div {
+        background-image: url("../images/tap.gif");
+    }
+
+    #rightclick div {
+        background-image: url("../images/swipe.gif");
+    }
+
+    #leftclick p, #rightclick p {
+        margin: 0;
+        height: 20%;
+    }
+
+    #gamestart {
+        margin: 1em auto;
+        width: 45%;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -408,6 +440,40 @@ h2 {
         display: none;
     }
 
+    #modal-controls {
+        width: 70%;
+        height: 60%;        
+        padding: 1em;
+    }
+
+    .desktop-controls {
+        display: none;
+    }
+    
+    .mobile-controls {
+        display: block;
+    }
+
+    #leftclick div, #rightclick div {
+        height: 50%;
+    }
+
+    #leftclick div {
+        background-image: url("../images/tap.gif");
+    }
+
+    #rightclick div {
+        background-image: url("../images/swipe.gif");
+    }
+
+    #leftclick p, #rightclick p {
+        margin: 0;
+    }
+
+    #gamestart {
+        margin: 0 auto;
+        width: 50%;
+    }
 
 }
 
@@ -467,6 +533,7 @@ h2 {
 
     #leftclick div, #rightclick div {
         width: 45%;
+        height: 100%;
     }
 
     #leftclick div {
