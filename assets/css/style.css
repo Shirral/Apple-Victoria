@@ -253,6 +253,7 @@ h2 {
     font-weight: 600;
     margin: 2em auto 0;
     text-align: center;
+    height: 10%;
     
 }
 
@@ -317,6 +318,76 @@ h2 {
     p {
         font-size: 43px;
     }
+
+    #modal-controls {
+        width: 60%;
+        height: 70%;
+        padding-top: 3.5em;     
+        padding-bottom: 0; 
+    }
+
+    #modal-controls p {
+        font-size: 30px;
+    }
+
+    #leftclick, #rightclick {
+        height: 90%;
+    }
+
+    #gamestart {
+        margin-top: 1em;
+        width: 30%;
+        height: 3em;
+        display: flex;
+        justify-content: center;
+    }
+
+    #gamestart p {
+        align-self: center;
+    }
+
+   
+}
+
+@media screen and (min-width: 1351px) and (max-width: 2099px) and (hover: none) {
+    
+    .desktop-controls {
+        display: none;
+    }
+    
+    .mobile-controls {
+        display: block;
+    }
+
+    #leftclick p, #rightclick p {
+        font-size: 22px;
+    }
+    
+    #leftclick div {
+        background-image: url("../images/tap.gif");
+    }
+
+    #rightclick div {
+        background-image: url("../images/swipe.gif");
+    }
+
+    #modal-controls {
+        padding-top: 3.5em;     
+        padding-bottom: 3.5em; 
+    }
+
+    #gamestart {
+        margin-top: 3em;
+        width: 30%;
+        height: 2em;
+        display: flex;
+        justify-content: center;
+    }
+
+    #gamestart p {
+        font-size: 25px;
+        align-self: center;
+    }
 }
 
 @media screen and (max-width: 1350px) {
@@ -328,6 +399,19 @@ h2 {
     #outcome-text-div div, #intro-text-div div {
         padding-top: 0;
         padding-bottom: 0;
+    }
+
+    #modal-controls {
+        padding-bottom: 5em;      
+    }
+
+    #leftclick p, #rightclick p {
+        height: 10%;
+    }
+
+    #gamestart {
+        margin-top: 3.5em;
+        width: 30%;
     }
 
 }
@@ -343,6 +427,42 @@ h2 {
         padding-bottom: 0;
     }
 
+    #modal-controls {
+        padding-bottom: 5em;      
+    }
+
+    #leftclick p, #rightclick p {
+        height: 10%;
+    }
+
+    #gamestart {
+        margin-top: 3.5em;
+        width: 45%;
+    }
+
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1350px) and (hover: none) {
+    
+    .desktop-controls {
+        display: none;
+    }
+    
+    .mobile-controls {
+        display: block;
+    }
+
+    #leftclick div {
+        background-image: url("../images/tap.gif");
+    }
+
+    #rightclick div {
+        background-image: url("../images/swipe.gif");
+    }
+
+    #modal-controls {
+        padding-top: 3.5em;      
+    }
 }
 
 @media screen and (max-width: 1050px) {
@@ -360,6 +480,50 @@ h2 {
         padding-bottom: 0;
     }
 
+    #modal-controls {
+        height: 55%;
+        padding: 1em 2em 3em 2em;      
+    }
+
+    #leftclick div, #rightclick div {
+        height: 70%;
+    }
+
+    #leftclick p, #rightclick p {
+        margin-top: 2em;
+        height: 20%;
+        width: 100%;
+    }
+
+    #gamestart {
+        margin: 2em auto;
+        width: 40%;
+    }
+
+}
+
+@media screen and (min-width: 801px) and (max-width: 1050px) and (hover: none) {
+    
+    #modal-controls {
+        height: 55%;
+        padding-top: 3em;      
+    }
+    
+    .desktop-controls {
+        display: none;
+    }
+    
+    .mobile-controls {
+        display: block;
+    }
+
+    #leftclick div {
+        background-image: url("../images/tap.gif");
+    }
+
+    #rightclick div {
+        background-image: url("../images/swipe.gif");
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -381,12 +545,6 @@ h2 {
 
     #outcome-text-div::-webkit-scrollbar, #intro-text-div::-webkit-scrollbar {
         display: none;
-    }
-
-    #modal-controls {
-        width: 70%;
-        height: 70%;        
-        padding: 1em;
     }
     
     .desktop-controls {
@@ -411,7 +569,7 @@ h2 {
     }
 
     #gamestart {
-        margin: 1em auto;
+        margin: 2em auto;
         width: 45%;
     }
 
