@@ -110,6 +110,13 @@ let applesPicked = 0;
 let badApples = 0;
 
 function pickApple(){
+
+    if ($(this).attr("data-picked") == "picked"){
+        return;
+    }
+
+    $(this).attr("data-picked", "picked");
+
     applesPicked++;
     binApples++;
     if ($(this).hasClass("bad-apple")){
@@ -127,8 +134,6 @@ function pickApple(){
         nextTree();    
     });
 }
-
-//FIX THE ANIMATION - NOW BROKEN!!! - ONLY OPACITY WORKING
 
 $(document).on('click', '.apple-picture', pickApple);
 
@@ -211,7 +216,7 @@ function timer() {
 
     function displayTime(){
         seconds++;
-        console.log(seconds);
+        //console.log(seconds);
         switch(true){
             case (seconds < 5):
                 $('#timer-div h1').html('8:00');
