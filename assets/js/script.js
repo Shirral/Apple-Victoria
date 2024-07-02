@@ -28,8 +28,12 @@ function pickingMode() {
         <div id='apple-div'>
             
         </div>
-        <div id='apple-bin' class='prevent-select'>
-            <img src='assets/images/bin.png'>
+        <div id='apple-bin' class='prevent-select'> 
+            <img src='assets/images/bin.png' class='bin-image bin1'>
+            <img src='assets/images/bin2.png' class='bin-image bin2' style="display:none">
+            <img src='assets/images/bin3.png' class='bin-image bin3' style="display:none">
+            <img src='assets/images/bin4.png' class='bin-image bin4' style="display:none">
+            <img src='assets/images/bin5.png' class='bin-image bin5' style="display:none">
         </div>
     </div>
     `);
@@ -150,43 +154,48 @@ $(document).on('contextmenu', '.apple-picture', dropApple);
 
 function nextBin(){
     
-    if (binApples >= 43){
-        binApples = 0;
+    if (binApples == 43){
+        
         let windowWidth = $(window).width();
         let binWidth = $('#apple-bin').outerWidth();
         let finalMarginLeft = (windowWidth - binWidth) / 2;
+
+        $('.bin-image').hide();
+        $('.bin5').show();
         
         $('#apple-bin').animate({marginLeft: 0, opacity: 0}, 'slow', function() {
             $(this).css({marginLeft: '100%'});
         });
         $('#apple-bin').animate({marginLeft: finalMarginLeft, opacity: 1}, 'slow');
+        binApples = 0;
+        
+        setTimeout(() => {
+            $('.bin-image').hide();
+            $('.bin1').show();
+        }, 700);
+        
     }
 }
 
 function showBinFullnessLevel(){
     switch(true){
+        case (binApples > 42):
+            break;
         case (binApples < 15):
-            $('#apple-bin').html(`
-                <img src='assets/images/bin2.png'></img>
-            `);
+            $('.bin-image').hide();
+            $('.bin2').show();
             break;
         case (binApples < 30):
-            $('#apple-bin').html(`
-                <img src='assets/images/bin3.png'></img>
-            `);
+            $('.bin-image').hide();
+            $('.bin3').show();
             break;
         case (binApples < 43):
-            $('#apple-bin').html(`
-                <img src='assets/images/bin4.png'></img>
-            `);
-            break;
-        case (binApples == 43):
-            $('#apple-bin').html(`
-                <img src='assets/images/bin5.png'></img>
-            `);
+            $('.bin-image').hide();
+            $('.bin4').show();
             break;
     }
 }
+
 
 function nextTree(){
     if ($('#apple-div').children().length === 0) {
