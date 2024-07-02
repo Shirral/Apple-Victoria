@@ -142,6 +142,13 @@ function pickApple(){
 $(document).on('click', '.apple-picture', pickApple);
 
 function dropApple(){
+
+    if ($(this).attr("data-picked") == "picked"){
+        return;
+    }
+
+    $(this).attr("data-picked", "picked");
+
     $(this).animate({top: '+=200', opacity: 0}).promise().done(function() {
         $(this).remove();
         console.log('Apple removed');
