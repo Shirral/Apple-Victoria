@@ -135,6 +135,7 @@ h2 {
     text-align: center;
     border-radius: 10px;
     width: 20%;
+    cursor: pointer;
 }
 
 #tryagain {
