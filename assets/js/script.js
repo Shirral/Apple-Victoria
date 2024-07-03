@@ -129,8 +129,8 @@ function pickApple(){
     console.log(applesPicked);
     console.log(binApples);
     console.log(badApples);
-    $(this).animate({height: '+=50px', width: '+=50px'});
-    $(this).animate({height: '1px', width: '1px', opacity: 0}).promise().done(function() {
+    $(this).animate({height: '+=50px', width: '+=50px'}, "fast");
+    $(this).animate({height: '1px', width: '1px', opacity: 0}, "fast").promise().done(function() {
         $(this).remove();
         console.log('Apple removed');
         showBinFullnessLevel();
