@@ -61,43 +61,30 @@ function applesAppear() {
     
         let appleNum = Math.floor(Math.random()*100)+1;
     
-        console.log(appleNum);
-    
         switch (true) {
             case (appleNum <= 17):
-                console.log('1');
                 return applePicturesArray[0];
             case (appleNum <= 34):
-                console.log('2');
                 return applePicturesArray[1];
             case (appleNum <= 51):
-                console.log('3');
                 return applePicturesArray[2];
             case (appleNum <= 67):
-                console.log('4');
                 return applePicturesArray[3];
             case (appleNum <= 83):
-                console.log('5');
                 return applePicturesArray[4];
             case (appleNum <= 100):
-                console.log('6');
                 return applePicturesArray[5];
         }
     
     }
 
-    console.log(appleType());
-
     let applePicture = `${appleType()}`;
     $('#apple-div').append(applePicture);
-
-    console.log(applePositionTop, applePositionLeft);
 
 }
 
 function newTree(){
     let appleAmount = Math.floor(Math.random() * 35.99 + 5);
-    console.log(appleAmount);
     for (let i = 0; i < appleAmount; i++) {
         applesAppear();
       }
@@ -126,13 +113,10 @@ function pickApple(){
     if ($(this).hasClass("bad-apple")){
         badApples++;
     }
-    console.log(applesPicked);
-    console.log(binApples);
-    console.log(badApples);
+    
     $(this).animate({height: '+=50px', width: '+=50px'}, "fast");
     $(this).animate({height: '1px', width: '1px', opacity: 0}, "fast").promise().done(function() {
         $(this).remove();
-        console.log('Apple removed');
         showBinFullnessLevel();
         nextBin();
         nextTree();    
@@ -151,7 +135,6 @@ function dropApple(){
 
     $(this).animate({top: '+=200', opacity: 0}).promise().done(function() {
         $(this).remove();
-        console.log('Apple removed');
         nextTree();    
     });
 }
@@ -206,7 +189,6 @@ function showBinFullnessLevel(){
 
 function nextTree(){
     if ($('#apple-div').children().length === 0) {
-        console.log('yeah');
 
         let windowWidth = $(window).width();
         let binWidth = $('#tree-bg-div').outerWidth();
@@ -218,10 +200,6 @@ function nextTree(){
         $('#tree-bg-div').animate({marginLeft: finalMarginLeft}, 'slow', function(){
             newTree();
         });
-    
-        
-
-        console.log('yeah yeah');
     }
 }
 
@@ -420,10 +398,6 @@ function endScreen () {
         $('#rotten-percentage').html(`${badApplePercentage}%`);
         $('#rotten-appraisal').html('Sadly, this is below satisfactory.');
     }
-
-
-    
-    console.log(badApplePercentage);
 }
 
 
