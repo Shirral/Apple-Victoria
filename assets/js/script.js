@@ -161,7 +161,7 @@ $(document).on('contextmenu', '.apple-picture', dropApple);
 
 function nextBin(){
     
-    if (binApples == 43){
+    if (binApples == 40){
         
         let windowWidth = $(window).width();
         let binWidth = $('#apple-bin').outerWidth();
@@ -186,17 +186,17 @@ function nextBin(){
 
 function showBinFullnessLevel(){
     switch(true){
-        case (binApples > 42):
+        case (binApples > 40):
             break;
-        case (binApples < 15):
+        case (binApples < 13):
             $('.bin-image').hide();
             $('.bin2').show();
             break;
-        case (binApples < 30):
+        case (binApples < 26):
             $('.bin-image').hide();
             $('.bin3').show();
             break;
-        case (binApples < 43):
+        case (binApples < 40):
             $('.bin-image').hide();
             $('.bin4').show();
             break;
@@ -348,7 +348,7 @@ function endScreen () {
 
     let binsPicked = 0;
     if (applesPicked > 0) {
-        binsPicked = (applesPicked/43).toFixed(1);
+        binsPicked = (applesPicked/40).toFixed(1);
     }
 
     $('#screen').html(`
@@ -373,7 +373,7 @@ function endScreen () {
     
     $('#screen').removeClass('picking-screen').addClass('end-screen');
 
-    if (applesPicked >= 151 && badApplePercentage <= 5){
+    if (applesPicked >= 140 && badApplePercentage <= 5){
         $('#win-fail-div').html(`
             <h1>APPLE VICTORIA!</h1>
         `)
@@ -381,7 +381,7 @@ function endScreen () {
         $('#supervisor-says').html('Good speed, good fruit quality; you\'ve done well, kid');
         $('#what-next-span').html('Give yourself a pat on the back - you\'ve earned it! As you retreat to your caravan to enjoy the rest of your day, you wonder if you can be even better tomorrow?...');
         $('#score-span').html(applesPicked);
-    } else if (applesPicked >= 151 && badApplePercentage > 5){
+    } else if (applesPicked >= 140 && badApplePercentage > 5){
         $('#win-fail-div').html(`
             <h1>APPLE DEFEAT!</h1>
         `)
@@ -389,7 +389,7 @@ function endScreen () {
         $('#supervisor-says').html('Good speed, but the fruit quality is awful. Would you buy these apples? I would not. We can\'t do much with them');
         $('#what-next-span').html('The supervisor was probably right - although the beauty standards for apples are unreasonably high, most people still prefer their fruits without mushy bits, mould, or worms. You\'ll need to do better tomorrow...');
         $('#score-span').html('0');
-    } else if (applesPicked < 151 && badApplePercentage <= 5){
+    } else if (applesPicked < 140 && badApplePercentage <= 5){
         $('#win-fail-div').html(`
             <h1>APPLE DEFEAT!</h1>
         `)
