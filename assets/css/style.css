@@ -30,7 +30,7 @@ h2 {
     text-shadow: 1px 1px rgba(61, 71, 55, 0.1);
 }
 
-#screen {
+.screen {
     position: fixed;
     top: 0;
     width: 100%;
@@ -43,6 +43,7 @@ h2 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    display: none;
 }
 
 #tree-bg-div {
@@ -73,6 +74,7 @@ h2 {
 .end-screen {
     background-image: url("../images/end-screen-bg.jpg");
     background-size: cover;
+    display: none;
 }
 
 #win-fail-div, #title-div {

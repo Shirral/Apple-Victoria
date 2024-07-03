@@ -1,43 +1,6 @@
 function pickingMode() {
-    $('#screen').html(`
-    <div class='modal'>
-        <div id='modal-controls'>
-            <div id='clickimages'>
-                <div id='leftclick'>
-                    <div></div>
-                    <p class='desktop-controls'><span class='highlight'>Left click</span> on an apple to pick it.</p>
-                    <p class='mobile-controls'><span class='highlight'>Tap</span> on an apple to pick it.</p>
-                    </div>
-                <div id='rightclick'>
-                    <div></div>
-                    <p class='desktop-controls'><span class='highlight'>Right click</span> on an apple to drop it to the ground.</p>
-                    <p class='mobile-controls'><span class='highlight'>Swipe down</span> on an apple to drop it to the ground.</p>
-                </div>
-            </div>
-            <div id='gamestart' class='prevent-select'>
-                <p>START THE DAY!</p>
-            </div>       
-            </div>
-    </div>
-
-    <div id='tree-bg-div'></div>
-    <div id='content'>
-        <div id='timer-div' class='prevent-select'>
-            <h1>8:00</h1>
-        </div>
-        <div id='apple-div'>
-            
-        </div>
-        <div id='apple-bin' class='prevent-select'> 
-            <img src='assets/images/bin.png' class='bin-image bin1'>
-            <img src='assets/images/bin2.png' class='bin-image bin2' style="display:none">
-            <img src='assets/images/bin3.png' class='bin-image bin3' style="display:none">
-            <img src='assets/images/bin4.png' class='bin-image bin4' style="display:none">
-            <img src='assets/images/bin5.png' class='bin-image bin5' style="display:none">
-        </div>
-    </div>
-    `);
-    $('#screen').removeClass('start-screen').addClass('picking-screen');
+    $('.screen').hide();
+    $('.picking-screen').show();
 };
 
 $('#start-button').on('click', pickingMode);
@@ -94,7 +57,7 @@ function newTree(){
 $(document).on('click', '#gamestart', newTree);
 $(document).on('click', '#gamestart', timer);
 $(document).on('click', '#gamestart', (function(){
-    $('.modal').remove();
+    $('.modal').hide();
   }));
 
 let applesPicked = 0;
@@ -329,56 +292,32 @@ function endScreen () {
         binsPicked = (applesPicked/40).toFixed(1);
     }
 
-    $('#screen').html(`
-    <div id ='win-fail-div' class='prevent-select'>
-    </div>
-    <div id='outcome-text-div'>
-        <div>
-            <h2>You have picked ${binsPicked} bins of apples.</h2>
-            <h2><span id='rotten-percentage'>${badApplePercentage}%</span> of them were rotten... <span id='rotten-appraisal'><span></h2>
-            <h2>Your supervisor <span id='supervisor-span'></span></h2>
-            <h2>"<span id='supervisor-says'></span>", he says to you.</h2>
-            <h2>The work day is over. <span id='what-next-span'></span></h2>
-        </div>
-    </div>
-    <div id='score-div'class='prevent-select'>
-        <p>TOTAL SCORE: <span id='score-span'></span></p>
-    </div>
-    <div id='tryagain'class='prevent-select'>
-        <p>GIVE IT ANOTHER GO!</p>
-    </div>
-        `);
-    
-    $('#screen').removeClass('picking-screen').addClass('end-screen');
+    $('.picking-screen').hide();
+    $('.end-screen').show();
+
+    $('#bins-picked').html(binsPicked);
+    $('#rotten-percentage').html(badApplePercentage);
 
     if (applesPicked >= 140 && badApplePercentage <= 5){
-        $('#win-fail-div').html(`
-            <h1>APPLE VICTORIA!</h1>
-        `)
+        $('#win-fail-div h1').html('APPLE VICTORIA!');
         $('#supervisor-span').html('is very pleased with your work.');
         $('#supervisor-says').html('Good speed, good fruit quality; you\'ve done well, kid');
         $('#what-next-span').html('Give yourself a pat on the back - you\'ve earned it! As you retreat to your caravan to enjoy the rest of your day, you wonder if you can be even better tomorrow?...');
         $('#score-span').html(applesPicked);
     } else if (applesPicked >= 140 && badApplePercentage > 5){
-        $('#win-fail-div').html(`
-            <h1>APPLE DEFEAT!</h1>
-        `)
+        $('#win-fail-div h1').html('APPLE DEFEAT!');
         $('#supervisor-span').html('is not impressed.');
         $('#supervisor-says').html('Good speed, but the fruit quality is awful. Would you buy these apples? I would not. We can\'t do much with them');
         $('#what-next-span').html('The supervisor was probably right - although the beauty standards for apples are unreasonably high, most people still prefer their fruits without mushy bits, mould, or worms. You\'ll need to do better tomorrow...');
         $('#score-span').html('0');
     } else if (applesPicked < 140 && badApplePercentage <= 5){
-        $('#win-fail-div').html(`
-            <h1>APPLE DEFEAT!</h1>
-        `)
+        $('#win-fail-div h1').html('APPLE DEFEAT!');
         $('#supervisor-span').html('looks slightly disappointed.');
         $('#supervisor-says').html('Good quality, but you really need to speed up. The farm will take losses if you don\'t, and the owners won\'t be happy about that...');
         $('#what-next-span').html('As you go back to your caravan, you hear your peers bragging about how much they picked today. If they can do it, surely you can get there, too? Tomorrow, you think to yourself. You will be faster tomorrow.');
         $('#score-span').html('0');
     } else {
-        $('#win-fail-div').html(`
-            <h1>APPLE DEFEAT!</h1>
-        `)
+        $('#win-fail-div h1').html('APPLE DEFEAT!');
         $('#supervisor-span').html('looks at you in disbelief.');
         $('#supervisor-says').html('You spent all day picking THAT? The quality is appaling, and you haven\'t even picked 3,5 bins. What am I supposed to do with you?');
         $('#what-next-span').html('You don\'t know what your supervisor will do with you, but you sure hope it doesn\'t involve being sent to the packhouse. There is a reason everybody hates it there. You better do much, MUCH better tomorrow...');
@@ -402,9 +341,14 @@ function endScreen () {
 
 
 $(document).on('click', '#tryagain p', function(){
-    $('#screen').removeClass('end-screen').addClass('picking-screen');
     binApples = 0;
     applesPicked = 0;
     badApples = 0;
+    $('.modal').show();
+    $('.apple-picture').remove();
+    $('#timer-div h1').html('8:00');
+    $('.bin-image').hide();
+    $('.bin1').show();
+
     pickingMode();
 });

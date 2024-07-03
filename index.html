@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body ondragstart="return false">
-        <div id='screen' class='start-screen'>
+        <div class='screen start-screen'>
             <div id ='title-div'>
                 <h1 class='prevent-select'>APPLE VICTORIA</h1>
             </div>
@@ -25,6 +25,67 @@
                 <p>TO THE ORCHARD!</p>
             </div>
         </div>
+
+        <div class="screen picking-screen">
+            <div class='modal'>
+                <div id='modal-controls'>
+                    <div id='clickimages'>
+                        <div id='leftclick'>
+                            <div></div>
+                            <p class='desktop-controls'><span class='highlight'>Left click</span> on an apple to pick it.</p>
+                            <p class='mobile-controls'><span class='highlight'>Tap</span> on an apple to pick it.</p>
+                            </div>
+                        <div id='rightclick'>
+                            <div></div>
+                            <p class='desktop-controls'><span class='highlight'>Right click</span> on an apple to drop it to the ground.</p>
+                            <p class='mobile-controls'><span class='highlight'>Swipe down</span> on an apple to drop it to the ground.</p>
+                        </div>
+                    </div>
+                    <div id='gamestart' class='prevent-select'>
+                        <p>START THE DAY!</p>
+                    </div>       
+                    </div>
+            </div>
+        
+            <div id='tree-bg-div'></div>
+            <div id='content'>
+                <div id='timer-div' class='prevent-select'>
+                    <h1>8:00</h1>
+                </div>
+                <div id='apple-div'>
+                    
+                </div>
+                <div id='apple-bin' class='prevent-select'> 
+                    <img src='assets/images/bin.png' class='bin-image bin1'>
+                    <img src='assets/images/bin2.png' class='bin-image bin2' style="display:none">
+                    <img src='assets/images/bin3.png' class='bin-image bin3' style="display:none">
+                    <img src='assets/images/bin4.png' class='bin-image bin4' style="display:none">
+                    <img src='assets/images/bin5.png' class='bin-image bin5' style="display:none">
+                </div>
+            </div>
+        </div>
+
+        <div class="screen end-screen">
+            <div id ='win-fail-div' class='prevent-select'>
+                <h1></h1>
+            </div>
+            <div id='outcome-text-div'>
+                <div>
+                    <h2>You have picked <span id='bins-picked'></span> bins of apples.</h2>
+                    <h2><span id='rotten-percentage'>${badApplePercentage}%</span> of them were rotten... <span id='rotten-appraisal'><span></h2>
+                    <h2>Your supervisor <span id='supervisor-span'></span></h2>
+                    <h2>"<span id='supervisor-says'></span>", he says to you.</h2>
+                    <h2>The work day is over. <span id='what-next-span'></span></h2>
+                </div>
+            </div>
+            <div id='score-div'class='prevent-select'>
+                <p>TOTAL SCORE: <span id='score-span'></span></p>
+            </div>
+            <div id='tryagain'class='prevent-select'>
+                <p>GIVE IT ANOTHER GO!</p>
+            </div>
+        </div>
+
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="assets/js/jquery.mobile-events.js"></script>
         <script src="assets/js/script.js" async defer></script>
