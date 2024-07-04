@@ -20,7 +20,14 @@ function applesAppear() {
 
     function appleType() {
     
-        let applePicturesArray = [`<img src="assets/images/apple.png" class="apple-picture prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}"></img>`, `<img src="assets/images/apple2.png" class="apple-picture prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}">`, `<img src="assets/images/apple3.png" class="apple-picture prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}">`, `<img src="assets/images/apple-bad.png" class="apple-picture bad-apple prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}">`, `<img src="assets/images/apple-bad2.png" class="apple-picture bad-apple prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}">`, `<img src="assets/images/apple-bad3.png" class="apple-picture bad-apple prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}">`];
+        let applePicturesArray = [
+            `<img src="assets/images/apple.png" class="apple-picture prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}"></img>`, 
+            `<img src="assets/images/apple2.png" class="apple-picture prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}">`, 
+            `<img src="assets/images/apple3.png" class="apple-picture prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}">`, 
+            `<img src="assets/images/apple-bad.png" class="apple-picture bad-apple prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}">`, 
+            `<img src="assets/images/apple-bad2.png" class="apple-picture bad-apple prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}">`, 
+            `<img src="assets/images/apple-bad3.png" class="apple-picture bad-apple prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}">`
+        ];
     
         let appleNum = Math.floor(Math.random()*100)+1;
     
