@@ -167,117 +167,29 @@ function nextTree(){
 }
 
 function timer() {
-    let seconds = 0;
-
-    let interval = setInterval(displayTime, 1000);
+    let counter = 0;
 
     function displayTime(){
-        seconds++;
-        //console.log(seconds);
-        switch(true){
-            case (seconds < 5):
-                $('#timer-div h1').html('8:00');
-                break;
-            case (seconds < 10):
-                $('#timer-div h1').html('8:15');
-                break;
-            case (seconds < 15):
-                $('#timer-div h1').html('8:30');
-                break;
-            case (seconds < 20):
-                $('#timer-div h1').html('8:45');
-                break;
-            case (seconds < 25):
-                $('#timer-div h1').html('9:00');
-                break;
-            case (seconds < 30):
-                $('#timer-div h1').html('9:15');
-                break;
-            case (seconds < 35):
-                $('#timer-div h1').html('9:30');
-                break;
-            case (seconds < 40):
-                $('#timer-div h1').html('9:45');
-                break;
-            case (seconds < 45):
-                $('#timer-div h1').html('10:00');
-                break;
-            case (seconds < 50):
-                $('#timer-div h1').html('10:15');
-                break;
-            case (seconds < 55):
-                $('#timer-div h1').html('10:30');
-                break;
-            case (seconds < 60):
-                $('#timer-div h1').html('10:45');
-                break;
-            case (seconds < 65):
-                $('#timer-div h1').html('11:00');
-                break;
-            case (seconds < 70):
-                $('#timer-div h1').html('11:15');
-                break;
-            case (seconds < 75):
-                $('#timer-div h1').html('11:30');
-                break;
-            case (seconds < 80):
-                $('#timer-div h1').html('11:45');
-                break;
-            case (seconds < 85):
-                $('#timer-div h1').html('12:00');
-                break;
-            case (seconds < 90):
-                $('#timer-div h1').html('12:15');
-                break;
-            case (seconds < 95):
-                $('#timer-div h1').html('12:30');
-                break;
-            case (seconds < 100):
-                $('#timer-div h1').html('12:45');
-                break;
-            case (seconds < 105):
-                $('#timer-div h1').html('13:00');
-                break;
-            case (seconds < 110):
-                $('#timer-div h1').html('13:15');
-                break;
-            case (seconds < 115):
-                $('#timer-div h1').html('13:30');
-                break;
-            case (seconds < 120):
-                $('#timer-div h1').html('13:45');
-                break;
-            case (seconds < 125):
-                $('#timer-div h1').html('14:00');
-                break;
-            case (seconds < 130):
-                $('#timer-div h1').html('14:15');
-                break;
-            case (seconds < 135):
-                $('#timer-div h1').html('14:30');
-                break;
-            case (seconds < 140):
-                $('#timer-div h1').html('14:45');
-                break;
-            case (seconds < 145):
-                $('#timer-div h1').html('15:00');
-                break;
-            case (seconds < 150):
-                $('#timer-div h1').html('15:15');
-                break;
-            case (seconds < 155):
-                $('#timer-div h1').html('15:30');
-                break;
-            case (seconds < 160):
-                $('#timer-div h1').html('15:45');
-                break;
-            case (seconds >= 165):
-                $('#timer-div h1').html('16:00');
-                endScreen();
-                clearInterval(interval);
-                break;
+        dateObj = new Date(counter * 60 * 1000);
+        hours = (dateObj.getUTCHours() + 8);
+        minutes = dateObj.getUTCMinutes();
+
+        $('#hours').html(hours);
+        if (minutes == 0){
+            $('#minutes').html('00');
+        } else {
+            $('#minutes').html(minutes);
         }
     }
+
+    let interval =setInterval(() => {
+        counter += 15;
+        displayTime();
+        if (counter == 480) {
+            clearInterval(interval);
+            endScreen();
+        }
+    }, 5000);
 }
 
 function endScreen () {
