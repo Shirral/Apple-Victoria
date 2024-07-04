@@ -42,7 +42,7 @@ function applesAppear() {
                 return applePicturesArray[3];
             case (appleNum <= 83):
                 return applePicturesArray[4];
-            case (appleNum <= 100):
+            default:
                 return applePicturesArray[5];
         }
     
@@ -139,8 +139,6 @@ function nextBin(){
 
 function showBinFullnessLevel(){
     switch(true){
-        case (binApples > 40):
-            break;
         case (binApples < 13):
             $('.bin-image').hide();
             $('.bin2').show();
@@ -152,6 +150,8 @@ function showBinFullnessLevel(){
         case (binApples < 40):
             $('.bin-image').hide();
             $('.bin4').show();
+            break;
+        default:
             break;
     }
 }
