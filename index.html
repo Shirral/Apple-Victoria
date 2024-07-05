@@ -7,8 +7,11 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="assets/css/style.css">
-    </head>
-    <body ondragstart="return false">
+    </head> 
+    <body ondragstart="return false"> <!-- Prevent dragging images - it would interfere with gameplay -->
+        
+        <!-- The starting screen shown to the player when the page loads -->
+        
         <div class='screen start-screen'>
             <div id ='title-div'>
                 <h1 class='prevent-select'>APPLE VICTORIA</h1>
@@ -26,7 +29,12 @@
             </div>
         </div>
 
+        <!-- Picking screen shown to the player once they click on the "TO THE ORCHARD!" button -->
+
         <div class="screen picking-screen">
+
+            <!-- An overlay screen with the conrols instructions -->
+
             <div class='modal'>
                 <div id='modal-controls'>
                     <div id='clickimages'>
@@ -46,15 +54,15 @@
                     </div>       
                     </div>
             </div>
+
+            <!-- The main game screen -->
         
             <div id='tree-bg-div'></div>
             <div id='content'>
                 <div id='timer-div' class='prevent-select'>
                     <h1><span id='hours'>8</span>:<span id='minutes'>00</span></h1>
                 </div>
-                <div id='apple-div'>
-                    
-                </div>
+                <div id='apple-div'></div>
                 <div id='apple-bin' class='prevent-select'> 
                     <img src='assets/images/bin.png' class='bin-image bin1'>
                     <img src='assets/images/bin2.png' class='bin-image bin2' style="display:none">
@@ -64,6 +72,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- The end screen shown to the player when the game is finished -->
 
         <div class="screen end-screen">
             <div id ='win-fail-div' class='prevent-select'>
@@ -86,8 +96,16 @@
             </div>
         </div>
 
+        <!-- External script for the jQuery library -->
+
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+        <!-- External script for the mobile events library -->
+
         <script src="assets/js/jquery.mobile-events.js"></script>
+
+        <!-- Custom js file -->
+
         <script src="assets/js/script.js" async defer></script>
     </body>
 </html>
