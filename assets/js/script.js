@@ -1,6 +1,7 @@
 function pickingMode() {
     $('.screen').hide();
     $('.picking-screen').show();
+    $('#timer-div h1').hide();
 };
 
 $('#start-button').on('click', pickingMode);
@@ -28,7 +29,7 @@ function applesAppear() {
             `<img src="assets/images/apple-bad2.png" class="apple-picture bad-apple prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}">`, 
             `<img src="assets/images/apple-bad3.png" class="apple-picture bad-apple prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}">`
         ];
-    
+  
         let appleNum = Math.floor(Math.random()*100)+1;
     
         switch (true) {
@@ -45,10 +46,10 @@ function applesAppear() {
             default:
                 return applePicturesArray[5];
         }
-    
     }
 
     let applePicture = `${appleType()}`;
+   
     $('#apple-div').append(applePicture);
 
 }
@@ -175,7 +176,9 @@ function nextTree(){
 
 function timer() {
     let counter = 0;
-
+    $('#hours').html('8');
+    $('#minutes').html('00');
+    $('#timer-div h1').show();
     function displayTime(){
         dateObj = new Date(counter * 60 * 1000);
         hours = (dateObj.getUTCHours() + 8);
@@ -189,7 +192,7 @@ function timer() {
         }
     }
 
-    let interval =setInterval(() => {
+    let interval = setInterval(() => {
         counter += 15;
         displayTime();
         if (counter == 480) {
@@ -265,7 +268,6 @@ $(document).on('click', '#tryagain p', function(){
     badApples = 0;
     $('.modal').show();
     $('.apple-picture').remove();
-    $('#timer-div h1').html('8:00');
     $('.bin-image').hide();
     $('.bin1').show();
 
