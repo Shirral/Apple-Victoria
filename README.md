@@ -47,7 +47,7 @@ The overlay with the controls instructions uses white as its background, black a
 
 The main game screen is a little different as it showcases hand-drawn images of the apple tree, the apples, and the apple bin. The design goal of these is to give the player accurate information about their progress (changing colours of the apple bin, going from colourless through oragne and yellow to green when it's full) and to create a challenge of quickly telling apart different kinds of apples - good and bad - many of which might look similar at a first glance, but which show clear signs of being rotten upon closer inspection. While I tried to provide as varied colours for the different kinds of apples as possible, I was sticking to the shades found in different kinds of apples in real life.
 
-![colours used for the apples and apple bins](assets/readme/bins-apples.png "Colours used for the apples and for teh apple bins.")
+![colours used for the apples and apple bins](assets/readme/bins-apples.png "Colours used for the apples and for the apple bins.")
 
 The background was made to visually represent a tree that is being picked, including the animation representing the player moving on to the next tree filled with new apples, but the main focus of the player's atention should be on the apples themselves. For this reason, the background features muted shades of green that don't distract from the bright colours of the apples.
 
@@ -62,9 +62,33 @@ Sedan SC is a serif font that conveys the feelings of grandeur and refinement; i
 
 In contrast, Josefin Sans is a rounded sans-serif font that invokes friendliness. It is albo easy to read. It is used to convery the instructions about the gameplay to the player, as well as the detailed information about their performance.
 
-Both fonts are served by Google Fonts. Garamond has been provided as a fallback font for Sedan SC, as it's also a Garalde typeface; Arial has been provided as fallback for Josefin Sans as the most rounded of the web safe sans-serif fonts currently available. 
+Both fonts are served by Google Fonts. Garamond has been provided as a fallback font for Sedan SC, as it's also a Garalde typeface; Arial has been provided as fallback for Josefin Sans as the most rounded of the web safe sans-serif fonts currently available.
 
+**Imagery**
 
+The imagery of the project revolves around one theme: apples. Opening the page with the game, the user is greeted by a full-screen background picture of an apple orchard during the picking season with a bin filled with freshly picked apples - this is to let them know immediately what the game will be about. The colours are pleasant, warm, and inviting.
 
+The end screen is fresh and crisp, featuring an image of a thick apple leafage with apples growing among them. It provides a fitting background for the information about the player's performance in the orchard.
+
+The main game screen, once more, is a bit different from the rest. While the starting screen and the end screen serve the function of providing the player with information about the game, this screen is where the game actually happens. The function of the visual elements is not just to look nice; they need to provide very specific information to the player. For this reason, I needed full control over what the visual elements are going to look like. All the images there, including the animated images showing the controls on the overlay, are hand-drawn and kept in the same cartoonish visual style. It's meant to be simple and fun.
+
+**Wireframes**
+
+As for this project I did not need to cooperate with other developers, I did not see the need to use digital tools to make "proper" wireframes. I find it much more efficient to sketch out my ideas on paper. While I could had redone them with digital tools later to make them look pretty - and it is something I plan on doing in the future when I need to communicate my ideas to others clearly in the planning stage - in this case, that would had been a waste of time.
+
+Below are the sketches made in the planning stage of working on the project, along with some early notes - please excuse the lined paper, sadly I had no plain paper available at the time.
+
+![wireframes](assets/readme/wireframes.png "Initial sketches from the planning stage of the project work.")
+![wireframes](assets/readme/wireframes2.png "Initial sketches from the planning stage of the project work.")
+
+At the very beginning of the project work I intented to build a more advanced simulator including the elements and gameplay known from visual novel games. I wanted to create a coherent story around the main apple picking part, including a cast of characters, several different endings, and twists that can affect the gameplay. Fortunately, it was pointed out to me that the scope of that idea might had been a bit too broad for my very first Javascript project, and that in order to make sure I finish before the deadline, it might be good to just focus on the main gameplay itself. Here is a screenshot of the skeleton of the visual-novel style screen I intended to use:
+
+![visual novel game style screen design](assets/readme/prototype1.png "A skeleton of the visual novel game style screen design.")
+
+Early prototype of the picking screen:
+
+![early prototype of the picking screen](assets/readme/prototype2.png "Early prototype of the picking screen.")
+
+## Features
 
 
