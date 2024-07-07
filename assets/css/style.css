@@ -19,18 +19,18 @@ body {
 
 p {
     margin: 0;
-    font-family: "Sedan SC", serif;
+    font-family: "Sedan SC", Garamond, serif;
 }
 
 h1 {
     margin: 0;
     font-size: 65px;
-    font-family: "Sedan SC", serif;
+    font-family: "Sedan SC", Garamond, serif;
     text-align: center;
 }
 
 h2 {
-    font-family: "Josefin Sans", sans-serif;
+    font-family: "Josefin Sans", Arial, sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     text-shadow: 1px 1px rgba(61, 71, 55, 0.1);
