@@ -10,6 +10,7 @@ function pickingMode() {
     $('.screen').hide();
     $('.picking-screen').show();
     $('#timer-div h1').hide();
+    $('#apple-bin').hide();
 };
 
 /* event listener displaying the main game screen */
@@ -268,6 +269,7 @@ function timer() {
     $('#hours').html('8');
     $('#minutes').html('00');
     $('#timer-div h1').show();
+    $('#apple-bin').show();
 
     /* convert the time passed stored in the counter variable to a hh:mm format 
     and update the in-game clock using the Date object */
