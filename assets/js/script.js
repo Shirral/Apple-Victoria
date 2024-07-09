@@ -11,7 +11,7 @@ function pickingMode() {
     $('.picking-screen').show();
     $('#timer-div h1').hide();
     $('#apple-bin').hide();
-};
+}
 
 /* event listener displaying the main game screen */
 
@@ -33,12 +33,12 @@ function applesAppear() {
         /* array of the 6 different apple images with the corresponding attributes */
     
         let applePicturesArray = [
-            `<img src="assets/images/apple.png" class="apple-picture prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}"></img>`, 
-            `<img src="assets/images/apple2.png" class="apple-picture prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}">`, 
-            `<img src="assets/images/apple3.png" class="apple-picture prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}">`, 
-            `<img src="assets/images/apple-bad.png" class="apple-picture bad-apple prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}">`, 
-            `<img src="assets/images/apple-bad2.png" class="apple-picture bad-apple prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}">`, 
-            `<img src="assets/images/apple-bad3.png" class="apple-picture bad-apple prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}">`
+            `<img src="assets/images/apple.png" class="apple-picture prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}" alt="A good apple."></img>`, 
+            `<img src="assets/images/apple2.png" class="apple-picture prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}" alt="A good apple.">`, 
+            `<img src="assets/images/apple3.png" class="apple-picture prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}" alt="A good apple.">`, 
+            `<img src="assets/images/apple-bad.png" class="apple-picture bad-apple prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}" alt="A bad apple.">`, 
+            `<img src="assets/images/apple-bad2.png" class="apple-picture bad-apple prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}" alt="A bad apple.">`, 
+            `<img src="assets/images/apple-bad3.png" class="apple-picture bad-apple prevent-select" style="top:${applePositionTop}; left:${applePositionLeft}" alt="A bad apple.">`
         ];
   
         /* generate a number between 1-100 */

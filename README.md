@@ -163,7 +163,39 @@ I would like to continue the development of the project to eventually bring it t
 
 * **Supervisor inspections:** Throughout the picking day, the player character would get randomly visited by the supervisor who would inspect the contents of their current bin, and provide feedback. If they catch the player using any of the "forbidden" power-ups, or filling the bin with too many bad apples, they might issue a warning. Too many of these and the game ends sooner with the player character getting fired.
 
+## Testing
 
+### Validator Testing
 
+* **HTML:**
 
+  The initial testing has revealed a `<span>` tag that was not closed properly and the lack of a space character between the "id" and "class" attributes in two divs of the end screen. This has been fixed.
+
+  The validator has also thrown a warning about the empty heading in the end screen that gets filled with the information on the player's victory or defeat through Javascript at the end of the game.
+
+  It has also shown errors relating to the missing `alt` attribute for the image tags. I initially didn't see the purpose of adding it - the project is a game that is relies on visual imagery and the speed of reaction; the images don't fill any of the functions that normally call for using the attribute in web projects. I have added the attribute in the end, as there is no harm in that and it might be useful to be able to tell the images apart in case they fail to load.
+
+  The second round of testing only showed the warning about the empty heading.
+
+  [W3C validator](https://validator.w3.org/) was used.
+
+* **CSS:**
+
+  The validator did not find any errors.
+  
+  Warnings were shown about the vendor extensions I used to ensure that the styling I'm using will work on all the major browsers: `-webkit-user-select`, `-ms-user-select`, `-ms-overflow-style` and `::-webkit-scrollbar`.
+
+  [W3C Jigsaw validator](https://jigsaw.w3.org/css-validator/) was used.
+
+* **JS:**
+
+  The validator has found one unnecessary semicolon at the end of a function definition. The semicolon was removed.
+
+  [JQuery Validator](https://www.utilities-online.info/jquery-validator) was used.
+
+* **Performance & best practices:**
+
+  While [Lighthouse]() was satisfied with the page load of the project (all of the statistics in the green zone, ranging between 90-100% on both desktop and mobile device evaluation), it was less impressed when I evaluated the project using its Timespan mode so that the whole project and its interactivity would be assessed. Best Practices were rated 8/8, but the Performance was rated 14/22 (yellow zone).
+
+  After I implemented some of the suggested changes (compressing the background images into the WebP format, )
 

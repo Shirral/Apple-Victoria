@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Apple Victoria</title>
-        <meta name="description" content="">
+        <meta name="description" content="A short, simple game about commercial apple picking. Can you be a good enough picker?">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="assets/css/style.css">
     </head> 
@@ -64,11 +64,11 @@
                 </div>
                 <div id='apple-div'></div>
                 <div id='apple-bin' class='prevent-select'> 
-                    <img src='assets/images/bin.png' class='bin-image bin1'>
-                    <img src='assets/images/bin2.png' class='bin-image bin2' style="display:none">
-                    <img src='assets/images/bin3.png' class='bin-image bin3' style="display:none">
-                    <img src='assets/images/bin4.png' class='bin-image bin4' style="display:none">
-                    <img src='assets/images/bin5.png' class='bin-image bin5' style="display:none">
+                    <img src='assets/images/bin.png' class='bin-image bin1' alt='bin empty'>
+                    <img src='assets/images/bin2.png' class='bin-image bin2' style="display:none" alt='bin started'>
+                    <img src='assets/images/bin3.png' class='bin-image bin3' style="display:none" alt='bin 1/3 full'>
+                    <img src='assets/images/bin4.png' class='bin-image bin4' style="display:none" alt='bin 2/3 full'>
+                    <img src='assets/images/bin5.png' class='bin-image bin5' style="display:none" alt='bin full!'>
                 </div>
             </div>
         </div>
@@ -82,16 +82,16 @@
             <div id='outcome-text-div'>
                 <div>
                     <h2>You have picked <span id='bins-picked'></span> bins of apples.</h2>
-                    <h2><span id='rotten-percentage'>${badApplePercentage}%</span> of them were rotten... <span id='rotten-appraisal'><span></h2>
+                    <h2><span id='rotten-percentage'>${badApplePercentage}%</span> of them were rotten... <span id='rotten-appraisal'></span></h2>
                     <h2>Your supervisor <span id='supervisor-span'></span></h2>
                     <h2>"<span id='supervisor-says'></span>", he says to you.</h2>
                     <h2>The work day is over. <span id='what-next-span'></span></h2>
                 </div>
             </div>
-            <div id='score-div'class='prevent-select'>
+            <div id='score-div' class='prevent-select'>
                 <p>TOTAL SCORE: <span id='score-span'></span></p>
             </div>
-            <div id='tryagain'class='prevent-select'>
+            <div id='tryagain' class='prevent-select'>
                 <p>GIVE IT ANOTHER GO!</p>
             </div>
         </div>
