@@ -224,22 +224,34 @@ I would like to continue the development of the project to eventually bring it t
 
 * *As a first time visitor, I am bored and I'm looking for some entertainment; I want to have fun.*
 
-  * 
+  * The user is brought to the starting screen. The imagery and the story introduction suggest the website might have something to do with picking apples; hopefully that makes the user curious. If they read the emphasised line on the bottom or click on the button, they will realise it's a game they can play to fend off their boredom for a bit. They click on the "GO TO THE ORCHARD!" button, learn the controls, click on the "START THE DAY!" button and play the game.
 
 * *As a first time visitor, I have a few minutes to pass and I'm looking for something to do that won't take a long time.*
 
-  * 
+  * The user is brought to the starting screen. If they read the emphasised line on the bottom, they will realise the website contains a game that only takes about 3 minutes to play - just what they need. They can now click on the "GO TO THE ORCHARD!" button and play the game.
 
 * *As a first time visitor, I am curious about apple picking and want to see how an apple picking simulator might work.*
 
-  * 
+  * The user is brought to the starting screen where they are presented with the flavour text that details the basic rules of apple picking. Then, after they click on the "GO TO THE ORCHARD!" button and familiarise themselves with the controls, they start the game by clicking on the "START THE DAY!" button. During the gameplay, they get to put what they've just learned into practice. At the end, they receive an evaluation of their efforts which is what they would likely be told by their supervisor if they picked a similar amount of apples of a similar quality at a real-life commercial farm.
 
 **2. Returning Visitor Goals**
 
 * *As a returning visitor, I want to try to beat my previous score in the game.*
 
-  * 
+  * After having played the game once and receiving their evaluation, the user can click on the "GIVE IT ANOTHER GO!" button to play again and try to achieve a better result. They can also refresh the website to start the game again from the starting screen. The user can always navigate to the website after having closed the page to play the game again, too.
 
 * *As a returning visitor, I want to try to share the game with somebody who might find it funny - perhaps someone who has worked as an apple picker at a farm before.*
 
-  * 
+  * The user can copy the website's address and paste it in a message to their friend or, if they're on a mobile device, tap on the "share" button in their browser to share the game with others.
+
+### Further Testing
+
+The website has been tested on a variety of screen sizes (resizing the browser window on desktop, tablet, smartphones), browsers (Chrome, Safari, Opera, Edge, Firefox), and devices. Family and friends have been asked to perform additional testing on devices I had no access to (Macbook, iPhone).
+
+The game performed well on all of the devices and browsers tested, although there were some unexpected differences between them:
+
+* The performance on Chrome on iPad Air (4th Edition) was not as smooth as on other devices using the same browser, nor as the same device running Safari. The browser struggled to register apples being tapped quickly one after another to be picked; it did not have the same problem with swiping on the apples to drop them, though.
+
+* Microsoft Edge would sometimes display an image search icon on the clicked apples, which was easy to click on accidentally when picking another apple nearby. This would disrupt the gameplay as it would prompt the browser to run the image search in a window that would pop up to the right side of the screen. Sadly, a programmatical way of disabling it doesn't seem to exist at the moment; the feature can only be turned off locally on the user's device. 
+
+* the iPads allow for the display of the context menu if the user taps and holds on an apple or a bin. 
