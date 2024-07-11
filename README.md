@@ -103,7 +103,7 @@ Moreover, a different set of controls has been prepared for mobile devices and p
 
 ### Start screen
 
-The start screen introduces the player to the game and provides them with the information on what they need to do in order to beat it. It features a simple structure fit for the purpose: the name of the project at the top, an easy to read section with text on a lighter background, and a button which brings the user to the main game screen once it is clicked. Behind it all is a  full-screen background image of an apple orchard on a sunny Autumn day.
+The start screen introduces the player to the game and provides them with the information on what they need to do in order to beat it. It features a simple structure fit for the purpose: the name of the project at the top, an easy to read section with text on a lighter background (scrollable on smaller screens), and a button which brings the user to the main game screen once it is clicked. Behind it all is a  full-screen background image of an apple orchard on a sunny Autumn day.
 
 ![start screen](assets/readme/start-screen.png "The starting screen.")
 
@@ -139,7 +139,7 @@ The start screen introduces the player to the game and provides them with the in
 
   ![game outcome section](assets/readme/outcome-section.png "Game outcome section.")
 
-* **Outcome text section:** A more detailed breakdown of the player's performance, including the information on the amount of apple bins they managed to pick and the percentage of the apples picked that was rotten. Based on these two, the flavour text - the supervisor's evaluation - is displayed. There are several different outcomes possible for the player to get.
+* **Outcome text section:** A more detailed breakdown of the player's performance, including the information on the amount of apple bins they managed to pick and the percentage of the apples picked that was rotten. Based on these two, the flavour text - the supervisor's evaluation - is displayed. There are several different outcomes possible for the player to get. Scrollable on smaller screens.
 
   ![outcome text section](assets/readme/outcome-text.png "Outcome text section.")
 
@@ -195,7 +195,51 @@ I would like to continue the development of the project to eventually bring it t
 
 * **Performance & best practices:**
 
-  While [Lighthouse]() was satisfied with the page load of the project (all of the statistics in the green zone, ranging between 90-100% on both desktop and mobile device evaluation), it was less impressed when I evaluated the project using its Timespan mode so that the whole project and its interactivity would be assessed. Best Practices were rated 8/8, but the Performance was rated 14/22 (yellow zone).
+  While [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) was satisfied with the page load of the project (all of the statistics in the green zone, ranging between 90-100% on both desktop and mobile device evaluation), it was less impressed when I evaluated the project using its Timespan mode so that the whole project and its interactivity would be assessed. Best Practices were rated 8/8, but the Performance was rated 14/22 (yellow zone).
 
-  After I implemented some of the suggested changes (compressing the background images into the WebP format, )
+  After I implemented some of the suggested changes (compressing the background images into the WebP format, adding the missing meta tag attribute), the latter went up to 17/22.
 
+### Manual testing: Features
+
+
+| Feature       | Expected behaviour | Action  | Result |
+| ------------- |--------------------| --------|--------|
+| *Responsive design* | When the project is viewed on different kinds of devices with different screen sizes, the design should remain clear and functional. The elements of the starting screen and end screen should resize to match the window size; the apples should generate on a smaller area on smaller screens, and be smaller, and take up more space on screens where more space is available. No elements should go beyond the edge of the screen. | The project is opened and the game is played on several different devices: a laptop (Acer Nitro 5), an Android phone (Ulephone Power Armor 14), and an iOS tablet (iPad Air 4th Generation). | The elements of the project respond to the different screen sizes correctly, changing their proportions to preserve the design and functionality of the game. |
+| *Start screen* | The starting screen should load all its elements: the main heading, the div element with the main text, the background image, and the "TO THE ORCHARD!" button-like link. The main text should be scrollable within the bounds of the div on the smaller screens.  | The page is loaded. Scrolling the main text is attempted on a mobile phone (Ulephone Power Armor 14). | All of the elements are loaded correctly. The main text scrolls within its div on a mobile device. |
+| *Start screen: "TO THE ORCHARD!" button* | The button should change its colour scheme (black should change to red) once it is hovered upon with a pointer. The starting screen should be replaced with the main game screen with the controls instructions overlay once the button is clicked. | The button is hovered over with a cursor, then it is clicked. | The button changes its colour scheme correctly. The starting screen is replaced with the main game screen with the controls instructions overlay. |
+| *Controls instructions overlay* | The controls instructions overlay should be shown on top of the tree background once the main game screen is loaded. The animated gif images presenting the actions required from the player to pick and drop apples should display correcly and show the animation. Each image should be accompanied by a textual description of the action either directly below it (in case of bigger screens) or to its side (in case of small screens). Below them, a "START THE DAY!" button should be displayed. | The main game screen is loaded. | All of the elements load and display correctly. |
+| *Controls instructions overlay: "START THE DAY!" button* | The button should change its colour scheme (black should change to pastel yellow, and vice versa; a thin black outline should appear) once it is hovered upon with a pointer. The overlay should disappear, the main game elements (timer, bin, apples) should be shown, and the game should begin. | The button is hovered over with a cursor, then it is clicked. | The button changes its colour scheme correctly. The overlay is hidden, the main game elements are shown, and the game starts correctly. |
+| *Timer* | The timer should update the hour shown on the screen by 15 minutes every 5 seconds. When it reaches 16:00, the game should end and the main game screen should be replaced with the end screen. | The game is started and the timer is allowed to run until the hour shown in the screen reaches 16:00. | The timer updates the hour shown on the screen correctly. The game ends and the end screen is shown once it reaches 16:00 with all of its elements loading correctly. |
+| *Randomly generated apples* | When the game starts, a random amount of apples between 5-40 appears on the screen, in randomly determined positions between the timer and the apple bin. While it's okay for the apples to cover the top of the bin, they should never cover the timer or go over the edge of the screen. The number of apples generated should never be below 5 or above 40 at a time. All 6 different kinds of apples (3 good, 3 bad) should be generating with a similar frequency. | The game is started multiple times so that several batches of apples are generated. | The apples are generated correctly. |
+| *Apple bin* | The picture of the apple bin changes, showing the level of the fullness of the bin, once the following numbers of apples in the current bin are reached: 1, 13, 26, 40. When the bin is full, an animation is triggered that moved the picture of the full bin off the side of the screen, to the left, and brings in a picture of an empty bin back to the centre of the screen, from the right. | 40 apple images are clicked on. | The bin image swaps are happening at the right thresholds of apples picked. At 40 apples, the bin animation is triggered. It runs as expected. |
+| *Apple tree background* | When the game is started and the main game screen is emptied of apples (they have been picked or dropped), the background image of an apple tree is animated off the side of the screen, to the left, and then slides back into its central position on the screen from the right. | The game is started and all the apples that generated are clicked on. | When the screen is empty of apples, the background image animation is triggered. It runs as expected. |
+| *Game outcome section* | The heading at the very top of the page should say either "APPLE VICTORIA!" if the player has met the victory conditions or "APPLE DEFEAT!" if they have not. | The game is played twice. The first time, to win (good apples are picked, bad apples are dropped); the second time - to fail (no apples are picked or dropped). | The heading shows the correct message in both scenarios. |
+| *Outcome text section* | The outcome text should inform the player how many bins of apples they picked and what percentage of them were rotten. It should provide feedback on how good the player's performance was. There are several different outcomes dependent on the player's speed and accuracy. | The game was played several times to achieve the following results: 3.5+ bins of apples picked, none of them rotten; 3.5+ bins of apples picked, one of them rotten; 3.5+ bins of apples picked, less than 5% of them rotten; 3.5+ bins of apples picked, 5%+ of them rotten; less than 3.5+ bins of apples picked, less than 5% of them rotten; less than 3.5+ bins of apples picked, 5%+ of them rotten. | Picking 0, 1, less than 5% and 5%+ of the bad apples have all shown different feedback on the amount of rotten apples in the second paragraph. The combinations 3.5+ bins, <5% rotten apples; 3.5+ bins, 5%+ rotten apples; <3.5 bins, <5% rotten apples; <3.5+ bins, 5%+ rotten apples have all brought different supervisor feedback messages in paragraphs 3, 4, and 5. |
+| *Score section* | The score should display 0 if the player has not met the victory conditions. If they have, the score should display the amount of apples picked by the player. | The game is played twice. The first time, to win (good apples are picked, bad apples are dropped); the second time - to fail (only a few apples are picked). | The score displays 0 when the game is lost and a number of apples picked (in this case, 153) when it is won. |
+| *Try again button* | The button should change its colour scheme (dark green should change to light green, and vice versa; the outline should disappear) once it is hovered upon with a pointer. When the button is clicked, the game should be reset and the player should be brought back to the main game screen with the controls instructions overlay, ready to start another round. | The button is hovered over with a cursor, then it is clicked. | The button changes its colour scheme correctly. The end screen is replaced with the main game screen with the controls instructions overlay. |
+
+### Manual Testing: Testing User Stories from the UX/UI section
+
+**1. First Time Visitor Goals**
+
+* *As a first time visitor, I am bored and I'm looking for some entertainment; I want to have fun.*
+
+  * 
+
+* *As a first time visitor, I have a few minutes to pass and I'm looking for something to do that won't take a long time.*
+
+  * 
+
+* *As a first time visitor, I am curious about apple picking and want to see how an apple picking simulator might work.*
+
+  * 
+
+**2. Returning Visitor Goals**
+
+* *As a returning visitor, I want to try to beat my previous score in the game.*
+
+  * 
+
+* *As a returning visitor, I want to try to share the game with somebody who might find it funny - perhaps someone who has worked as an apple picker at a farm before.*
+
+  * 
