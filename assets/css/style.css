@@ -216,7 +216,7 @@ h2 {
 }
 
 #outcome-text-div div, #intro-text-div div {
-    padding: 2em;
+    padding: 0 2em;
     text-align: justify;
     margin: auto;
 }
