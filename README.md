@@ -254,4 +254,57 @@ The game performed well on all of the devices and browsers tested, although ther
 
 * Microsoft Edge would sometimes display an image search icon on the clicked apples, which was easy to click on accidentally when picking another apple nearby. This would disrupt the gameplay as it would prompt the browser to run the image search in a window that would pop up to the right side of the screen. Sadly, a programmatical way of disabling it doesn't seem to exist at the moment; the feature can only be turned off locally on the user's device. 
 
-* the iPads allow for the display of the context menu if the user taps and holds on an apple or a bin. 
+## Bugs fixed & problems overcome
+
+* it was possible to click on the same apple numerous times before it was revomed from the DOM, getting it counted as if the player has picked similar apples. This was fixed by adding a flag to the apple element the first time the user clicks on a given apple and checking for the presence of the flag any time an apple is clicked - if the flag was already there, the rest of the picking or dropping function would be ignored.
+
+* the nextTree function would sometimes run several times, leading to several sets of apples generating all at once, if the player has been picking/dropping apples very quickly, making a lot of clicks. Adding the flags and the flag checks described above has solved this issue, too.
+
+* the apple bin wouldn't always return to the central position after the animation of it being moved to the side and returning from the other side would finish. The way the bin images were being swapped while the animation was running was to blame; pre-loading all the images and using `.show()` and `.hide()` methods has solved the issue.
+
+* accidentally dragging or selecting the apple images would stop the click event, interfering with the gameplay and making it impossible to play the game quickly as it's meant to be played. Adding `ondragstart="return false"` to the `<body>` element in the html file and the `user-select: none;`, `-webkit-user-select: none;` and `-ms-user-select: none;` rules to the css class applied to the apples and other chosen elements has solved the issue.
+
+* adding a swipe event for the dropping action on mobile devices proved to be quite a challenge, even though I have found several external libraries that offer the functionality I needed. After a lot of trial and error, it turned out that my apple elements were too small for the script I used to work reliably; changing the settings in the downloaded library a little has solved the issue.
+
+* the iPads allow for the display of the context menu if the user taps and holds on an apple or a bin. This has been successfully fixed by adding `-webkit-touch-callout: none;` to the css class used for preventing the selection of images.
+
+## Technologies and Resources used
+
+### Programming languages used:
+
+* **HTML5**
+* **CSS3**
+* **JavaScript**
+
+### Frameworks & Libraries Used:
+
+* **[jQuery](https://jquery.com/)**
+* **[swipe events by jquery](https://codepen.io/w3codemasters/pen/qvVwGQ)**
+* **[Google Fonts](https://fonts.google.com/)**
+
+### Software & other technologies used:
+
+* **[Visual Studio Code(https://code.visualstudio.com/)]** - IDE the project was written in. Used with the **[Live Server (Five Server)](https://marketplace.visualstudio.com/items?itemName=yandeu.five-server)**, **[HTML Boilerplate](https://marketplace.visualstudio.com/items?itemName=sidthesloth.html5-boilerplate)** and **[IntelliSense for CSS class names in HTML](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion)** extensions.
+* **[GitHub Desktop](https://github.com/apps/desktop)** - used for version control and pushing commits to GitHub.
+* **[Canva](https://www.canva.com/)** - used to get the screens mockup base.
+* **[Procreate](https://procreate.com/)** - used to draw the images of the apple tree, the apples, the apple bins, and the static images for the animated gifs showing the controls.
+* **[Ezgif](https://ezgif.com/maker)** - used to put the static images for the controls instructions gifs together into animated gif files.
+* **[Microsoft Copilot](https://copilot.microsoft.com/)** - used to create the background images for the starting screen and for the end screen.
+* **[Img.Upscaler](https://imgupscaler.com/)** - used for upscaling the images generated with Copilot.
+* **[IMAGECOLORPICKER](https://imagecolorpicker.com/)** - used to grab the colours to use in the design of the website from the generated images.
+
+### How-to references used:
+
+* [right click event](https://api.jquery.com/contextmenu/)
+* [swipe event](https://codepen.io/w3codemasters/pen/qvVwGQ )
+* [checking if a div is empty](https://www.geeksforgeeks.org/how-to-check-an-html-element-is-empty-using-jquery/)
+* [figuring out how to create the timer](https://www.w3schools.com/jsref/met_win_setinterval.asp), [another resource for this](https://developer.mozilla.org/en-US/docs/Web/API/setInterval)
+* [rounding numbers to 1 decimal point](https://www.altcademy.com/blog/how-to-round-numbers-in-javascript/)
+* [preventing user selection](https://www.w3schools.com/howto/howto_css_disable_text_selection.asp)
+* [preventing dragging](https://stackoverflow.com/questions/62097523/disable-dragging-of-image-in-entire-project-html-pages)
+* [hiding the scroll bar](https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp)
+* [fixing issues with media queries not being applied properly](https://blog.openreplay.com/understanding-css-media-queries/)
+* [media queries - detecting touch devices](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Media_queries), [another resource for this](https://stackoverflow.com/questions/26546254/how-to-write-css-media-queries-to-detect-a-touchscreen-device)
+* [cursor - pointer](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor)
+* [converting seconds to a hh:mm time format](https://www.geeksforgeeks.org/how-to-convert-seconds-to-time-string-format-hhmmss-using-javascript/ )
+* [preventing the context menu on a long tap on mobile Apple devices](https://stackoverflow.com/questions/12304012/preventing-default-context-menu-on-longpress-longclick-in-mobile-safari-ipad), [another resource for this](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-touch-callout)
