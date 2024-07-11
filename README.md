@@ -287,11 +287,13 @@ The game performed well on all of the devices and browsers tested, although ther
 * **[Visual Studio Code(https://code.visualstudio.com/)]** - IDE the project was written in. Used with the **[Live Server (Five Server)](https://marketplace.visualstudio.com/items?itemName=yandeu.five-server)**, **[HTML Boilerplate](https://marketplace.visualstudio.com/items?itemName=sidthesloth.html5-boilerplate)** and **[IntelliSense for CSS class names in HTML](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion)** extensions.
 * **[GitHub Desktop](https://github.com/apps/desktop)** - used for version control and pushing commits to GitHub.
 * **[Canva](https://www.canva.com/)** - used to get the screens mockup base.
+* **[Photopea](https://www.photopea.com/)** - used to prepare the images for the readme file.
 * **[Procreate](https://procreate.com/)** - used to draw the images of the apple tree, the apples, the apple bins, and the static images for the animated gifs showing the controls.
-* **[Ezgif](https://ezgif.com/maker)** - used to put the static images for the controls instructions gifs together into animated gif files.
+* **[Ezgif](https://ezgif.com/maker)** - used to put the static images for the controls instructions gifs together into animated gif files and to convert video into gif files for the readme.
 * **[Microsoft Copilot](https://copilot.microsoft.com/)** - used to create the background images for the starting screen and for the end screen.
 * **[Img.Upscaler](https://imgupscaler.com/)** - used for upscaling the images generated with Copilot.
 * **[IMAGECOLORPICKER](https://imagecolorpicker.com/)** - used to grab the colours to use in the design of the website from the generated images.
+* **[Snipping Tool](https://apps.microsoft.com/detail/9mz95kl8mr0l?hl=en-US&gl=US)** - used to for the screen recording to create the animated gifs for the readme file.
 
 ### How-to references used:
 
@@ -308,3 +310,75 @@ The game performed well on all of the devices and browsers tested, although ther
 * [cursor - pointer](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor)
 * [converting seconds to a hh:mm time format](https://www.geeksforgeeks.org/how-to-convert-seconds-to-time-string-format-hhmmss-using-javascript/ )
 * [preventing the context menu on a long tap on mobile Apple devices](https://stackoverflow.com/questions/12304012/preventing-default-context-menu-on-longpress-longclick-in-mobile-safari-ipad), [another resource for this](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-touch-callout)
+
+### Project guidance & assistance:
+
+* **My Mentor, Mitko Bachvarov** - thank you for your feedback and guidance!
+* **My friend Luís** - thank you for all the troubleshooting help, and for showing me how to do debugging!
+
+## Deployment
+
+### GitHub Pages
+
+The project was deployed to GitHub Pages as follows:
+
+1. I opened GitHub and located the project's repository.
+
+  ![locating the repository](assets/readme/deployment-1.png "Locating the project's repository.")
+
+2. I entered the repository and opened its settings.
+
+  ![settings](assets/readme/deployment-2.png "The repository's settings.")
+
+3. There, in the menu on the left of the screen, I located Pages.
+
+  ![accessing Pages](assets/readme/deployment-3.png "Accessing Pages.")
+
+4. Under "Build and development", there is a "Branch" section. I chose the `main` branch from the dropdown menu and clicked on the `Save` button.
+
+  ![choosing the branch](assets/readme/deployment-4.png "Choosing the main branch.")
+
+5. That's it! The site is now deployed and can be accessed from the link created by GitHub. The link can be found on the top of the "Pages" page once it refreshes.
+
+  ![live website link](assets/readme/deployment-5.png "Live website link.")
+
+### Forking the project on GitHub
+
+If, for whatever reason, anyone would like to get themselves a copy of this project to tinker with on their own - feel free to do so! Here is how to do it so you can have your own copy of the entire repository that you can do whatever you please with, without causing any changes to the original:
+
+1. Open the repository of this project on GitHub. It can be found [here](https://github.com/Shirral/Apple-Victoria).
+
+2. Find the "Fork" button located between the "Watch" and "Star" buttons, near the top of the repository page.
+
+  ![forking](assets/readme/fork.png "Forking the project.")
+
+3. Done! Go back to your profile - you will find the copy of the project in your repositories.
+
+### Cloning the project on GitHub *(instructions copied from GitHub Docs)*
+
+1. On GitHub.com, navigate to the main page of the repository.
+
+2. Above the list of files, click `Code`.
+
+  ![cloning](assets/readme/clone-1.png "Cloning the project.")
+
+3. Copy the URL for the repository.
+
+* To clone the repository using HTTPS, under "HTTPS", click on the 'copy' icon.
+* o clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click SSH, then click on the 'copy' icon.
+* To clone a repository using GitHub CLI, click GitHub CLI, then click on the 'copy' icon.
+
+  ![cloning](assets/readme/clone-2.png "Cloning the project.")
+
+4. Open Git Bash.
+
+5. Change the current working directory to the location where you want the cloned directory.
+
+6. Type `git clone`, and then paste the URL you copied earlier.
+
+7. Press Enter to create your local clone.
+
+## Live website link:
+
+[https://shirral.github.io/Apple-Victoria/](https://shirral.github.io/Apple-Victoria/)
+
