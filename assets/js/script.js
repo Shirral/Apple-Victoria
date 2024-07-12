@@ -353,7 +353,13 @@ function endScreen () {
     $('#bins-picked').html(binsPicked);
     $('#rotten-percentage').html(badApplePercentage);
 
-    if (binsPicked >= 3.5 && badApplePercentage <= 5){
+    if (binsPicked <= 0.5){
+        $('#win-fail-div h1').html('APPLE DEFEAT!');
+        $('#supervisor-span').html('looks at you in disbelief.');
+        $('#supervisor-says').html('You\'re taking a piss or what? What have you even been doing all day? We have no need for the likes of you here, kid');
+        $('#what-next-span').html('It looks like apple picking might not be the perfect role for you. You head to your caravan to pack your stuff...');
+        $('#score-span').html('0');
+    } else if (binsPicked >= 3.5 && badApplePercentage <= 5){
         $('#win-fail-div h1').html('APPLE VICTORIA!');
         $('#supervisor-span').html('is very pleased with your work.');
         $('#supervisor-says').html('Good speed, good fruit quality; you\'ve done well, kid');
@@ -379,7 +385,10 @@ function endScreen () {
         $('#score-span').html('0');
     }
 
-    if (badApples == 0){
+    if (badApples == 0 && applesPicked == 0){
+        $('#rotten-percentage').html('None');
+        $('#rotten-appraisal').html('Hardly an achievement, given you haven\'t picked anything at all.');
+    } else if (badApples == 0){
         $('#rotten-percentage').html('None');
         $('#rotten-appraisal').html('Very impressive! Such commendable attention to detail!');
     } else if (badApplePercentage == 0){
