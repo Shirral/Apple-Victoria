@@ -366,7 +366,7 @@ If, for whatever reason, anyone would like to get themselves a copy of this proj
 3. Copy the URL for the repository.
 
 * To clone the repository using HTTPS, under "HTTPS", click on the 'copy' icon.
-* o clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click SSH, then click on the 'copy' icon.
+* To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click SSH, then click on the 'copy' icon.
 * To clone a repository using GitHub CLI, click GitHub CLI, then click on the 'copy' icon.
 
   ![cloning](assets/readme/clone-2.png "Cloning the project.")
