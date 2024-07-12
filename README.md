@@ -163,6 +163,8 @@ I would like to continue the development of the project to eventually bring it t
 
 * **Supervisor inspections:** Throughout the picking day, the player character would get randomly visited by the supervisor who would inspect the contents of their current bin, and provide feedback. If they catch the player using any of the "forbidden" power-ups, or filling the bin with too many bad apples, they might issue a warning. Too many of these and the game ends sooner with the player character getting fired.
 
+* **Swipe action only available on mobile devices**: I would like the swipe action to only be available on the mobile devices, as it is currently possible to perform it accidentally while trying to click on an apple quickly and then moving the cursor away to another apple below it, which would result in dropping an apple rather than picking it. Unfortunately, I haven't found a way to only allow the action on the devices with touchscreens so far.
+
 ## Testing
 
 ### Validator Testing
