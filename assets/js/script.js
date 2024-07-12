@@ -209,6 +209,16 @@ function nextBin(){
     }
 }
 
+/* position the second and folowing bins in the middle of the screen after the
+window is resized - the nextBin function calculates its new position to pass it to
+the animation, which doesn't accept standard values for centering, overriding
+the css margin settings from the stylesheet; the new position won't be central
+anymore if the screen is suddenly resized */
+
+$(window).resize(function() {
+    $('#apple-bin').css({margin: '0 auto'});
+});
+
 /* show the image of a bin corresponding to the level of its fullness depending 
 on the current value of binApples to visually display the player's progress*/
 
