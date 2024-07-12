@@ -268,6 +268,8 @@ The game performed well on all of the devices and browsers tested, although ther
 
 * the iPads allow for the display of the context menu if the user taps and holds on an apple or a bin. This has been successfully fixed by adding `-webkit-touch-callout: none;` to the css class used for preventing the selection of images.
 
+* the second and following bins would not be positioned in the center of the screen after the window was resized. This happened both on computers and mobile devices (if the orientation was changed during the game) and was due to the fact that the nextBin function calculates the bin's current position to pass it to the animation, which  desn't accept standard values for centering, overriding the css margin settings from the stylesheet; the new position wouldn't be central anymore if the screen was suddenly resized. This has been fixed with using jQuery's `.resize` method to listen for any screen size changes, and to apply the original margin that centers it on the screen to the apple bin element.
+
 ## Technologies and Resources used
 
 ### Programming languages used:
