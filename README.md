@@ -256,19 +256,15 @@ The game performed well on all of the devices and browsers tested, although ther
 
 ## Bugs fixed & problems overcome
 
-* it was possible to click on the same apple numerous times before it was revomed from the DOM, getting it counted as if the player has picked similar apples. This was fixed by adding a flag to the apple element the first time the user clicks on a given apple and checking for the presence of the flag any time an apple is clicked - if the flag was already there, the rest of the picking or dropping function would be ignored.
-
-* the nextTree function would sometimes run several times, leading to several sets of apples generating all at once, if the player has been picking/dropping apples very quickly, making a lot of clicks. Adding the flags and the flag checks described above has solved this issue, too.
-
-* the apple bin wouldn't always return to the central position after the animation of it being moved to the side and returning from the other side would finish. The way the bin images were being swapped while the animation was running was to blame; pre-loading all the images and using `.show()` and `.hide()` methods has solved the issue.
-
-* accidentally dragging or selecting the apple images would stop the click event, interfering with the gameplay and making it impossible to play the game quickly as it's meant to be played. Adding `ondragstart="return false"` to the `<body>` element in the html file and the `user-select: none;`, `-webkit-user-select: none;` and `-ms-user-select: none;` rules to the css class applied to the apples and other chosen elements has solved the issue.
-
-* adding a swipe event for the dropping action on mobile devices proved to be quite a challenge, even though I have found several external libraries that offer the functionality I needed. After a lot of trial and error, it turned out that my apple elements were too small for the script I used to work reliably; changing the settings in the downloaded library a little has solved the issue.
-
-* the iPads allow for the display of the context menu if the user taps and holds on an apple or a bin. This has been successfully fixed by adding `-webkit-touch-callout: none;` to the css class used for preventing the selection of images.
-
-* the second and following bins would not be positioned in the center of the screen after the window was resized. This happened both on computers and mobile devices (if the orientation was changed during the game) and was due to the fact that the nextBin function calculates the bin's current position to pass it to the animation, which  desn't accept standard values for centering, overriding the css margin settings from the stylesheet; the new position wouldn't be central anymore if the screen was suddenly resized. This has been fixed with using jQuery's `.resize` method to listen for any screen size changes, and to apply the original margin that centers it on the screen to the apple bin element.
+| Problem description   |  Fix  |
+| --------------------- | ----- |
+| It was possible to click on the same apple numerous times before it was revomed from the DOM, getting it counted as if the player has picked similar apples. | A flag was added to the apple element the first time the user clicks on a given apple. A flag check was also added to run any time an apple is clicked - if the flag was already there, the rest of the picking or dropping function is going to be ignored. |
+| The nextTree function would sometimes run several times, leading to several sets of apples generating all at once, if the player has been picking/dropping apples very quickly, making a lot of clicks. | Adding the flags and the flag checks described above has solved this issue, too. |
+| The apple bin wouldn't always return to the central position after the animation of it being moved to the side and returning from the other side would finish. The way the bin images were being swapped while the animation was running was to blame. | Pre-loading all the images and using `.show()` and `.hide()` methods has solved the issue. |
+| Accidentally dragging or selecting the apple images would stop the click event, interfering with the gameplay and making it impossible to play the game quickly as it's meant to be played. | `ondragstart="return false"` has been added to the `<body>` element in the html file and the `user-select: none;`, `-webkit-user-select: none;` and `-ms-user-select: none;` rules have been added to the css class applied to the apples and other chosen elements. |
+| Adding a swipe event for the dropping action on mobile devices proved to be quite a challenge, even though I have found several external libraries that offer the functionality I needed. After a lot of trial and error, it turned out that my apple elements were too small for the script I used to work reliably. | Tweaking the settings in the downloaded library a little has solved the issue. |
+| The iPads allow for the display of the context menu if the user taps and holds on an apple or a bin. | `-webkit-touch-callout: none;` has been added to the css class used for preventing selection of images. |
+| The second and following bins would not be positioned in the center of the screen after the window was resized. This happened both on computers and mobile devices (if the orientation was changed during the game) and was due to the fact that the nextBin function calculates the bin's current position to pass it to the animation, which  desn't accept standard values for centering, overriding the css margin settings from the stylesheet; the new position wouldn't be central anymore if the screen was suddenly resized. | jQuery's `.resize` method was used to listen for any screen size changes, and to apply the original margin that centers the bin element to it. |
 
 ## Technologies and Resources used
 
@@ -312,6 +308,7 @@ The game performed well on all of the devices and browsers tested, although ther
 * [cursor - pointer](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor)
 * [converting seconds to a hh:mm time format](https://www.geeksforgeeks.org/how-to-convert-seconds-to-time-string-format-hhmmss-using-javascript/ )
 * [preventing the context menu on a long tap on mobile Apple devices](https://stackoverflow.com/questions/12304012/preventing-default-context-menu-on-longpress-longclick-in-mobile-safari-ipad), [another resource for this](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-touch-callout)
+* [event listener for screen resize action](https://stackoverflow.com/questions/2996431/detect-when-a-window-is-resized-using-javascript)
 
 ### Project guidance & assistance:
 
