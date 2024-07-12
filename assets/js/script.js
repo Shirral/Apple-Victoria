@@ -353,19 +353,19 @@ function endScreen () {
     $('#bins-picked').html(binsPicked);
     $('#rotten-percentage').html(badApplePercentage);
 
-    if (applesPicked >= 140 && badApplePercentage <= 5){
+    if (binsPicked >= 3.5 && badApplePercentage <= 5){
         $('#win-fail-div h1').html('APPLE VICTORIA!');
         $('#supervisor-span').html('is very pleased with your work.');
         $('#supervisor-says').html('Good speed, good fruit quality; you\'ve done well, kid');
         $('#what-next-span').html('Give yourself a pat on the back - you\'ve earned it! As you retreat to your caravan to enjoy the rest of your day, you wonder if you can be even better tomorrow?...');
         $('#score-span').html(applesPicked);
-    } else if (applesPicked >= 140 && badApplePercentage > 5){
+    } else if (binsPicked >= 3.5 && badApplePercentage > 5){
         $('#win-fail-div h1').html('APPLE DEFEAT!');
         $('#supervisor-span').html('is not impressed.');
         $('#supervisor-says').html('Good speed, but the fruit quality is awful. Would you buy these apples? I would not. We can\'t do much with them');
         $('#what-next-span').html('The supervisor was probably right - although the beauty standards for apples are unreasonably high, most people still prefer their fruits without mushy bits, mould, or worms. You\'ll need to do better tomorrow...');
         $('#score-span').html('0');
-    } else if (applesPicked < 140 && badApplePercentage <= 5){
+    } else if (binsPicked < 3.5 && badApplePercentage <= 5){
         $('#win-fail-div h1').html('APPLE DEFEAT!');
         $('#supervisor-span').html('looks slightly disappointed.');
         $('#supervisor-says').html('Good quality, but you really need to speed up. The farm will take losses if you don\'t, and the owners won\'t be happy about that...');
@@ -374,7 +374,7 @@ function endScreen () {
     } else {
         $('#win-fail-div h1').html('APPLE DEFEAT!');
         $('#supervisor-span').html('looks at you in disbelief.');
-        $('#supervisor-says').html('You spent all day picking THAT? The quality is appaling, and you haven\'t even picked 3,5 bins. What am I supposed to do with you?');
+        $('#supervisor-says').html('You spent all day picking THAT? The quality is appaling, and you haven\'t even picked enough. What am I supposed to do with you?');
         $('#what-next-span').html('You don\'t know what your supervisor will do with you, but you sure hope it doesn\'t involve being sent to the packhouse. There is a reason everybody hates it there. You better do much, MUCH better tomorrow...');
         $('#score-span').html('0');
     }
